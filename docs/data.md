@@ -20,7 +20,8 @@ The copy that always exists is the one in the app itself, on this computer.
 Saved File is a file of your own, and on Windows and macOS it is switched on from the moment you first open the app, in your Documents folder, with nothing for you to set up.
 On a Chromebook you pick the file yourself the first time.
 
-Google Drive is the optional one, and [it has its own page](./drive.html).
+Google Drive is the optional one, and the one part of Greatbook that costs money, at <!--price--> once.
+[It has its own page](./drive.html).
 
 These are all the same gradebook, not different ones.
 The app keeps them level with each other and never asks you which is the real one.
