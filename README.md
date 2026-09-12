@@ -33,13 +33,36 @@ The pages are markdown under `docs/`, each published at the matching address und
 - [Installing Greatbook](docs/install.md)
 - [Using Greatbook](docs/guide.md)
 - [Where your work is kept](docs/data.md)
-- [Google Drive backup](docs/drive.md)
+- [Google Drive backup](docs/drive.md), which is also where the premium version is sold
 - [When something goes wrong](docs/help.md)
+- [Thank you](docs/thanks.md), where the shop sends a buyer afterwards, and linked from nowhere on the site
 - [Privacy policy](docs/privacy.md)
 - [Terms of use](docs/terms.md)
 
 Corrections to any of them are welcome as a pull request.
 They are written one sentence per line, which keeps a change to a sentence looking like a change to a sentence rather than to a paragraph.
+
+### Adding a page
+
+Two steps, and missing the second means the file is simply never read.
+
+Write `docs/<slug>.md` starting at `##`, because the `<h1>` comes from the template and a page that opens with its own `#` ends up with two titles.
+Then add `{ slug, title, description, nav }` to the `pages` array in `site/build.mjs`, in the position the navigation should show it.
+`footer` in place of `nav` puts it with the policies, and a page with neither is built without being linked anywhere, which is what `thanks` is.
+
+### The markers the build fills in
+
+Three HTML comments are replaced as a page is rendered, so that what they stand for is written down once in `site/build.mjs` rather than in the prose of four pages.
+
+`<!--downloads-->` becomes the download table, built from the latest release.
+`<!--buy-->` becomes the button that goes to the shop, and `<!--price-->` becomes the price.
+
+### Screenshots
+
+They live in `site/shots/`, and are the one thing in `site/` that is not also copied to the company's root, because only Greatbook's pages ask for them.
+
+They are taken by `scripts/site-shots.mjs` in the application's own repository, against its sample class, so no real student appears in one.
+The filenames that script writes are what the prose here asks for, so retaking them is a matter of running it rather than of anything in this repository.
 
 ## Building the site
 
