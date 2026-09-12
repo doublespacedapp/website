@@ -194,6 +194,73 @@ caption {
   font-weight: 500;
 }
 
+/* Screenshots.
+ *
+ * The app is a light-coloured grid and this page follows whatever the reader's computer is
+ * set to, so at night a screenshot is a bright rectangle on a dark page. The matte and the
+ * hairline around it are what stop that reading as a hole in the page, and they cost one
+ * set of images to keep in step rather than two.
+ *
+ * A shot is wider than the prose on purpose. The measure is 38rem because that is a
+ * comfortable line of text, and a picture of a spreadsheet squeezed into it shows nothing.
+ * These are allowed out to 52rem, centred on the column, and fall back to the width of the
+ * column when the window is narrower than that. */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+figure.shot {
+  margin: 1.75rem 0;
+}
+
+/* Out to 52rem, and only once the window is wide enough that 52rem plus its margins
+ * certainly fits. Measured against the window rather than subtracted from it with vw,
+ * because vw counts the scrollbar and the arithmetic comes out a few pixels wide -- which
+ * costs a horizontal scrollbar on a phone, on every page with a picture on it. Below this
+ * width a shot is simply as wide as the column. */
+@media (min-width: 60rem) {
+  figure.shot {
+    margin-inline: -7rem;
+  }
+}
+
+figure.shot img {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--edge);
+  border-radius: 4px;
+  background: var(--raised);
+}
+
+figure.shot figcaption {
+  color: var(--quiet);
+  font-size: 0.92rem;
+  padding-top: 0.5rem;
+}
+
+/* The one control on the site that asks for money.
+ *
+ * The same shape as "Open the web app" in the top bar and deliberately no louder: by the
+ * time a reader is here the page has either persuaded them or it has not, and a bigger
+ * button does not settle it. */
+.buy {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 0.75rem;
+  margin: 1.5rem 0;
+}
+
+.buy-button {
+  border: 1px solid var(--link);
+  border-radius: 4px;
+  padding: 0.45rem 0.9rem;
+  text-decoration: none;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
 .note,
 .notice {
   color: var(--quiet);

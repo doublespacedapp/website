@@ -10,7 +10,7 @@
 // these pages. Keeping the built app out of this repository's history is what stops
 // every release from adding a few hundred generated files to it.
 
-import { mkdir, copyFile, readFile, writeFile, readdir } from 'node:fs/promises'
+import { mkdir, cp, copyFile, readFile, writeFile, readdir } from 'node:fs/promises'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -21,6 +21,18 @@ import { marked } from 'marked'
 // in here is written by hand and may contain either.
 function fill(text, marker, value) {
   return text.replaceAll(marker, () => value)
+}
+
+// The descriptions below are prose, and they go into an attribute rather than into the
+// body, where an apostrophe or a quotation mark would end the attribute early and put the
+// rest of the sentence into the markup as if it were more attributes.
+function escapeAttribute(text) {
+  return text
+    .replaceAll('&', '&amp;')
+    .replaceAll('"', '&quot;')
+    .replaceAll("'", '&#39;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
 }
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
@@ -46,18 +58,94 @@ const productOut = join(out, productDir)
 // release yet rather than an error anybody sees.
 const repo = process.env.RELEASES_REPOSITORY ?? 'doublespacedapp/greatbook'
 
+// The site's own address, needed in exactly one place: the sharing tags below, which are
+// read by other people's servers and so cannot be the relative links everything else here
+// is built from.
+const SITE = 'https://doublespaced.app'
+
+// Where buying happens, and what it costs.
+//
+// Both are written once here and poured into the prose at <!--buy--> and <!--price-->, the
+// way the download table already is, because the alternative is a price that appears on
+// four pages and is right on three of them.
+//
+// The app deliberately knows neither: the price and the number of computers a key covers
+// are settings in the shop's dashboard, so changing them does not need a release. This
+// site does have to name the price, because a page that will not say what something costs
+// is not a page anyone buys from.
+const BUY_URL = 'https://buy.polar.sh/polar_cl_f3W79wDbGpq4tljxGl0XRe3wTF0om7H1iGXnk2a7l5h'
+const PRICE = '$14.99'
+
+// The picture shown when a link to any of these pages is pasted somewhere that unfurls it.
+// The grid, because it is the screen a teacher spends the year in and the one that says
+// what this is in a single glance.
+const SHARE_IMAGE = 'shots/grid.png'
+
 // Order is the order of the navigation bar. Pages after the divider are reachable from
 // the footer instead, because a teacher looking for help should not have to read past
 // two policies to find it.
+// A page with neither `nav` nor `footer` is built and is reachable by its address, and is
+// simply not linked from the chrome. That is what `thanks` is: it is reached from the
+// shop's receipt and from nowhere on the site, so putting it in the navigation would only
+// offer a page about a purchase to people who have not made one.
+//
+// `description` is the sentence search results and chat previews show. It is written per
+// page rather than once for the site, because a teacher sent a link to the help page and
+// shown a description of the whole app has been told nothing.
 const pages = [
-  { slug: 'index', title: PRODUCT, nav: 'Home' },
-  { slug: 'install', title: `Installing ${PRODUCT}`, nav: 'Install' },
-  { slug: 'guide', title: `Using ${PRODUCT}`, nav: 'Guide' },
-  { slug: 'data', title: 'Where your work is kept', nav: 'Your data' },
-  { slug: 'drive', title: 'Google Drive backup', nav: 'Google Drive' },
-  { slug: 'help', title: 'When something goes wrong', nav: 'Help' },
-  { slug: 'privacy', title: 'Privacy policy', footer: 'Privacy' },
-  { slug: 'terms', title: 'Terms of use', footer: 'Terms' },
+  {
+    slug: 'index',
+    title: PRODUCT,
+    nav: 'Home',
+    description: `A gradebook for teachers of any grade, from kindergarten through twelfth. It works offline and keeps every score in a file you own.`,
+  },
+  {
+    slug: 'install',
+    title: `Installing ${PRODUCT}`,
+    nav: 'Install',
+    description: `How to install ${PRODUCT} on Windows, on a Mac, or on a Chromebook, and what to do about the warning an unsigned installer brings.`,
+  },
+  {
+    slug: 'guide',
+    title: `Using ${PRODUCT}`,
+    nav: 'Guide',
+    description: `What each part of ${PRODUCT} is for, from setting up a class in September to printing report cards.`,
+  },
+  {
+    slug: 'data',
+    title: 'Where your work is kept',
+    nav: 'Your data',
+    description: `Where ${PRODUCT} keeps your gradebook, how its backups work, and how to get one back.`,
+  },
+  {
+    slug: 'drive',
+    title: 'Google Drive backup',
+    nav: 'Google Drive',
+    description: `Keep a copy of your gradebook in your own Google Drive and pick it up on any computer. One payment of ${PRICE}.`,
+  },
+  {
+    slug: 'help',
+    title: 'When something goes wrong',
+    nav: 'Help',
+    description: `Answers to what goes wrong most often in ${PRODUCT}.`,
+  },
+  {
+    slug: 'thanks',
+    title: 'Thank you',
+    description: `Your key is on its way. How to turn on Google Drive backup in ${PRODUCT}.`,
+  },
+  {
+    slug: 'privacy',
+    title: 'Privacy policy',
+    footer: 'Privacy',
+    description: `What ${PRODUCT} collects about you and your students, which is nothing.`,
+  },
+  {
+    slug: 'terms',
+    title: 'Terms of use',
+    footer: 'Terms',
+    description: `The terms for using ${PRODUCT}, written to be read rather than to be impressive.`,
+  },
 ]
 
 // What the latest release offers, or nothing at all before the first one exists.
@@ -112,6 +200,12 @@ function downloadTable(release) {
   return `<table class="downloads"><caption>Version ${release.version}</caption><tbody>\n${body}\n</tbody></table>`
 }
 
+// The one thing on the site that asks for money, so it is written once and looks the same
+// wherever the prose puts it.
+function buyButton() {
+  return `<p class="buy"><a class="buy-button" href="${BUY_URL}">Get the premium version</a> <span class="note">${PRICE} once. Your key arrives by email.</span></p>`
+}
+
 function navigation(current) {
   return pages
     .filter((page) => page.nav !== undefined)
@@ -151,11 +245,16 @@ const umbrellaChrome = {
 // One page, with the chrome it belongs to. Split out of the loop below so the company's
 // page and the standing app page can be written the same way rather than each unpicking
 // the template on its own.
-function render({ title, nav, footer, content, chrome }) {
+function render({ title, description, nav, footer, content, chrome }) {
   let page = fill(template, '{{wordmark}}', chrome.wordmark)
   page = fill(page, '{{actions}}', chrome.actions)
   page = fill(page, '{{colophon}}', chrome.colophon)
   page = fill(page, '{{title}}', title)
+  page = fill(page, '{{description}}', escapeAttribute(description))
+  // Absolute, and the only absolute link on the site. Everything a reader clicks is
+  // relative so the whole subtree can move; these two are read by other people's servers,
+  // which have no page to be relative to.
+  page = fill(page, '{{shareImage}}', `${SITE}/${productDir}/${SHARE_IMAGE}`)
   page = fill(page, '{{nav}}', nav)
   page = fill(page, '{{footer}}', footer)
   page = fill(page, '{{content}}', content)
@@ -172,12 +271,15 @@ await mkdir(productOut, { recursive: true })
 for (const page of pages) {
   const source = await readFile(join(root, 'docs', `${page.slug}.md`), 'utf8')
   const body = marked.parse(source, { async: false })
-  const html = fill(body, '<!--downloads-->', downloadTable(release))
+  let html = fill(body, '<!--downloads-->', downloadTable(release))
+  html = fill(html, '<!--buy-->', buyButton())
+  html = fill(html, '<!--price-->', PRICE)
 
   await writeFile(
     join(productOut, `${page.slug}.html`),
     render({
       title: page.title,
+      description: page.description,
       nav: navigation(page.slug),
       footer: footerLinks(),
       content: html,
@@ -191,11 +293,18 @@ for (const page of pages) {
 // Written here rather than as another entry in `pages`, because that list describes one
 // flat directory of pages that link to each other with `./name.html`, and this one is not
 // in it: it sits a level up and points down into it.
-const home = marked.parse(await readFile(join(root, 'docs', 'home.md'), 'utf8'), { async: false })
+// Through the same markers as every other page. Nothing on it uses the download table
+// today, but a price written here and left unfilled would reach the site as an HTML
+// comment -- invisible, and wrong in the one place the reader most needs it right.
+let home = marked.parse(await readFile(join(root, 'docs', 'home.md'), 'utf8'), { async: false })
+home = fill(home, '<!--downloads-->', downloadTable(release))
+home = fill(home, '<!--buy-->', buyButton())
+home = fill(home, '<!--price-->', PRICE)
 await writeFile(
   join(out, 'index.html'),
   render({
     title: UMBRELLA,
+    description: `${UMBRELLA} makes software for teachers. A teacher's work belongs to the teacher.`,
     nav: `<a href="./${productDir}/" aria-current="page">${PRODUCT}</a>`,
     footer: pages
       .filter((page) => page.footer !== undefined)
@@ -209,13 +318,22 @@ await writeFile(
 // Everything in site/ that is not part of the build itself is served as it stands, and is
 // copied twice because the template asks for `./page.css` beside the page: the company's
 // page and the product's pages are at different depths, so one copy cannot serve both.
-const passthrough = (await readdir(join(root, 'site'))).filter(
-  (name) => !name.endsWith('.mjs') && name !== 'page.html',
+const passthrough = (await readdir(join(root, 'site'), { withFileTypes: true })).filter(
+  (entry) => entry.isFile() && !entry.name.endsWith('.mjs') && entry.name !== 'page.html',
 )
-for (const name of passthrough) {
-  await copyFile(join(root, 'site', name), join(out, name))
-  await copyFile(join(root, 'site', name), join(productOut, name))
+for (const entry of passthrough) {
+  await copyFile(join(root, 'site', entry.name), join(out, entry.name))
+  await copyFile(join(root, 'site', entry.name), join(productOut, entry.name))
 }
+
+// The screenshots, which are the one thing here that is not copied twice.
+//
+// They are pictures of Greatbook, only Greatbook's pages ask for them, and they are nearly
+// all of the weight of the built site, so a second copy at the company's root would double
+// the published artifact to serve files nothing links to. That is also why they sit in a
+// directory of their own rather than beside page.css: the loop above is files only, and a
+// screenshot dropped into site/ would land at the company root as well.
+await cp(join(root, 'site', 'shots'), join(productOut, 'shots'), { recursive: true })
 
 // Tells GitHub Pages not to run its own Jekyll pass over the output, which would
 // otherwise drop any file or folder whose name begins with an underscore. Vite names
@@ -250,6 +368,7 @@ await writeFile(
   join(productOut, 'app', 'index.html'),
   render({
     title: 'The web app is not published yet',
+    description: `${PRODUCT} runs in the browser, and this is where it will be.`,
     // One level down, so the links back up have to say so.
     nav: navigation('').replaceAll('href="./', 'href="../'),
     footer: footerLinks().replaceAll('href="./', 'href="../'),
