@@ -1,6 +1,9 @@
 If something is wrong, the answer is often on this page.
+
 If it is not, [open an issue](https://github.com/doublespacedapp/greatbook/issues) and describe what happened.
 Please do not paste real student names into an issue; it is a public page.
+
+Anything about a purchase, a key or a refund goes to [support@doublespaced.app](mailto:support@doublespaced.app) instead, which is not public.
 
 ## Windows will not let me run the installer
 
@@ -49,9 +52,34 @@ If the mess is older than that, Settings lists dated backups under Backups, and 
 
 ## Google Drive is not offered in Settings
 
-Most likely it is not switched on for teachers yet; it is [the planned paid addition](./drive.html).
+Drive backup is [the premium version](./drive.html), so if you have not bought it, that is why.
 
-It is also hidden if your school has turned off third-party apps for school Google accounts, which many districts do.
+If you have bought it and it is still not there, the likeliest reason is that your school has turned off third-party apps for school Google accounts, which many districts do.
+Greatbook notices that and does not offer Drive, rather than offering it and then failing when you take it up.
+
+## I bought the premium version and my key has not arrived
+
+Check the spam folder first, since a receipt from a shop you have not bought from before often lands there.
+
+Polar's receipt also carries a link to your own purchase page, where the key can be looked up again at any time.
+
+If neither helps, write to [support@doublespaced.app](mailto:support@doublespaced.app) and say which email address you paid with.
+
+## My key will not go in on another computer
+
+A key covers five computers.
+If all five are used, open Settings on a computer you no longer mark on and choose **Remove this key from this computer**, which frees the slot.
+
+If that computer is gone for good, write to [support@doublespaced.app](mailto:support@doublespaced.app) and the slot can be freed from the shop's side.
+
+## Drive backup has stopped and the app is asking me to reconnect
+
+The key is checked with the shop now and then, and that check needs the internet.
+After a fortnight with no connection, Drive backup pauses until the app can ask again.
+
+Nothing has been lost and nothing has to be bought again.
+Open the app once with a connection and it carries on.
+Every other part of Greatbook works throughout.
 
 ## I want to start the year again
 
