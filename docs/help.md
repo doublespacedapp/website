@@ -1,6 +1,6 @@
 If something is wrong, the answer is often on this page.
-If it is not, [open an issue](https://github.com/doublespacedapp/greatbook/issues) and describe what happened.
-Please do not paste real student names into an issue; it is a public page.
+If it is not, email <support@doublespaced.app> and describe what happened.
+You can also [open an issue](https://github.com/doublespacedapp/greatbook/issues), which is a public page: please do not paste real student names into one, and use email for anything that involves them.
 
 ## Windows will not let me run the installer
 

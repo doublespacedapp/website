@@ -74,4 +74,6 @@ If these terms change, the effective date at the top changes with them, and the 
 
 ## Getting in touch
 
-Questions go to [the issue tracker](https://github.com/doublespacedapp/greatbook/issues).
+Questions go to <support@doublespaced.app>, which is also where anything about a purchase belongs.
+
+Problems with the app itself can go to [the issue tracker](https://github.com/doublespacedapp/greatbook/issues) instead, which is public.

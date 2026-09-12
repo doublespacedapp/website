@@ -77,6 +77,7 @@ A change that would mean collecting something, rather than nothing, would be ann
 
 ## Getting in touch
 
-Questions about this policy, or about anything on it, go to [the issue tracker](https://github.com/doublespacedapp/greatbook/issues).
+Questions about this policy, or about anything on it, go to <support@doublespaced.app>.
 
-Please do not include real student names or scores in an issue, since issues are public.
+There is also [an issue tracker](https://github.com/doublespacedapp/greatbook/issues) for problems with the app itself.
+Please do not include real student names or scores in an issue, since issues are public; email is the place for anything that involves them.

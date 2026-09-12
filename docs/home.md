@@ -15,4 +15,4 @@ It runs as a desktop app on Windows and macOS and as an installable web app on a
 ## Getting in touch
 
 Greatbook's [help page](./greatbook/help.html) covers what goes wrong most often.
-Anything it does not, and anything you would like the software to do, is worth saying.
+Anything it does not, and anything you would like the software to do, is worth saying: <support@doublespaced.app>.
