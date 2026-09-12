@@ -1,9 +1,9 @@
 A gradebook for teachers of any grade, from kindergarten through twelfth.
 
-It works with no internet connection, keeps every score in a file that belongs to you, and asks you for no account of any kind.
+It works offline, keeps every score in a file you own, and never asks you to make an account.
 
 [Install it](./install.html) or [open the web app](./app/).
-Choose Try a sample class on the first screen to look around a full class without typing anything.
+Hit Try a sample class on the first screen to poke around a full class without typing anything in.
 
 <figure class="shot">
   <img src="./shots/grid.png" alt="The Grades tab: students down the side, assignments across the top, each column coloured by subject and labelled with the standard it assesses, and a class average along the bottom." width="3200" height="1800" loading="lazy">
@@ -12,44 +12,44 @@ Choose Try a sample class on the first screen to look around a full class withou
 
 ## Marking
 
-Students down the side, assignments across the top, filled in from the keyboard.
-Arrow keys move, typing enters a score, Enter drops to the next student, so a stack of papers goes in as fast as you can read them.
+Students down the side, assignments across the top.
+You never need the mouse: arrow keys move around, typing enters a score, Enter drops to the next student.
 
-Type m for missing and x to excuse a piece of work, and put an l after a score for late.
+Type m for missing, x to excuse a piece of work, and stick an l after a score for late work.
+A whole stack of papers goes in about as fast as you can read them.
 
-Score an assignment out of points, as a percent, as a level, or simply done and not done.
-Mark it extra credit, or leave it out of the grade entirely.
+Score things out of points, as a percent, as a level, or just done and not done.
+Flag an assignment as extra credit, or keep it out of the grade entirely.
 
-Comment on any single score.
-Copy and paste whole blocks of them.
-Undo is in the top bar and covers the whole session, because the fastest way to enter grades is also the fastest way to enter one in the wrong row.
+You can comment on any single score, copy and paste whole blocks of them, and undo the lot.
 
 ## Standards
 
-Tag an assignment with the standards it assesses — one project can cover three.
+Tag each assignment with the standards it covers.
+One project can carry three of them.
 
-Filter the grid to a single standard and you are looking at how the whole class is doing on that one thing, with nothing to set up.
+Filter the grid down to a single standard and you can see how all 24 students are doing on that one thing.
 
-Colour follows performance rather than decoration, so where a class is struggling is visible before you have read a number.
+Cells are shaded by how well students did, so a column that went badly jumps out before you have read a single number.
 
 ## Report cards
 
 <figure class="shot">
   <img src="./shots/report-card.png" alt="A report card for one student: a course percentage for Math, then each standard listed underneath with its own score and level, then benchmark results, then a box for the grade the teacher decides and a comment." width="3200" height="1800" loading="lazy">
-  <figcaption>A course grade, and beside it what the student can actually do.</figcaption>
+  <figcaption>The percentage, and underneath it the standard-by-standard picture.</figcaption>
 </figure>
 
-A page for each student, showing the course grade the assignments add up to and, beside it, where that student stands on each standard.
-Those are different questions, and the page keeps them apart: an average is not the same as knowing whether a student can do something.
+Every student gets a page showing the course grade their assignments add up to, and underneath it, how they are doing on each standard.
+You get both pictures at once.
 
-Then the grade you decide to give, which is yours and is not calculated, and room for comments.
-A comment you write every term can be saved and used again.
+Then you type in the grade you are actually giving, which the app never calculates for you, plus a comment.
+Comments you write every term can be saved and dropped in again.
 
-Build as many reports as you like, each with its own dates, and choose what goes on the card.
-A card for a parent and a card for a meeting are not the same card.
+Build as many reports as you like, each covering its own dates, and tick what goes on the card.
+Make a short one for parents and a fuller one for an IEP meeting.
 
-They print, with ruled lines for a signature and a date.
-Finalising one fixes what it says, so a grade you have already sent home does not quietly change when you enter a late assignment afterwards.
+They print properly, with ruled lines for a signature and a date.
+Finalise a card and its grades are frozen, so entering a late assignment next week will not change what you already sent home.
 
 ## Trends
 
@@ -58,23 +58,23 @@ Finalising one fixes what it says, so a grade you have already sent home does no
   <figcaption>One student against three standards, with the class average behind.</figcaption>
 </figure>
 
-Whether scores are going up or down over a stretch of the year, for one student or for the whole class.
+See whether scores are climbing or sliding over any stretch of the year, for one student or the whole class.
 
-Compare a student against the class average, or see how the class was spread across a single assignment.
-Every chart has the numbers underneath it if you would rather read them.
+Draw a student against the class average, chart up to four standards at once, or look at how the class was spread across a single assignment.
+Every chart has a button that shows you the numbers behind it.
 
 ## Benchmarks, behaviour and contacts
 
-Three more tabs, switched on for the classes that need them and off for the ones that do not.
+Three extra tabs you can switch on per class, and ignore for the classes that do not need them.
 
-**Benchmarks** are the tests you give a few times a year to see where students are.
-Set your own bands, with a colour each, so a raw score reads as approaching or met.
-They stay out of the course grade.
+**Benchmarks** hold the tests you run a few times a year — reading fluency, multiplication facts in two minutes.
+Set your own bands with a colour each, and a raw score turns into approaching or met on its own.
+They never touch the course grade.
 
-**Behaviors** is a record of what happened and when, for conferences and referrals — a grid of students against school days.
-The words are yours to choose.
+**Behaviors** is a grid of students against school days, so you can log what happened and have something concrete in front of you at a conference or a referral.
+You pick the wording your school uses.
 
-**Contacts** is a log of calls and emails home, with a column for who you still owe one.
+**Contacts** logs calls and emails home, with a Last column that tells you who you have not spoken to since October.
 
 <figure class="shot">
   <img src="./shots/behaviors.png" alt="The Behaviors tab: a grid of students against school days, with red marks for interfering behaviour and green for desired, and a running total for each student." width="3200" height="1800" loading="lazy">
@@ -83,46 +83,46 @@ The words are yours to choose.
 
 ## Grades worked out your way
 
-Total points or weighted categories, with low scores dropped if you drop them.
+Total points or weighted categories, dropping the lowest scores if that is how you work.
 
-Say what missing work counts as and what late work costs.
-A worked example shows the rule applied to a real number, so you can see what you have decided before a grade depends on it.
+Decide what missing work counts as and what late work costs.
+The app shows you the rule applied to a real number while you are setting it, so you can check it before any grade depends on it.
 
-Edit the levels and the letter grades yourself.
-Or turn percentages off altogether and mark in levels alone.
+Edit the levels and the letter grade cut-offs yourself.
+Or switch percentages off completely and mark everything in levels.
 
 ## Starting the year without typing
 
-Paste your roster in as a list rather than a name at a time.
+Paste your whole roster in at once.
 
-If you use Google Classroom, its grades download brings your class list, your assignments and your marks in together.
-You are shown what it would do before it does any of it, and asked which to keep where a mark disagrees with one of yours.
+Already grading in Google Classroom? Its grades download brings your students, your assignments and your marks across in one go.
+You see exactly what it will do first, and you decide which version wins when a mark clashes with one of yours.
 It never deletes anything.
 
-Common Core Math, Common Core English Language Arts and the Next Generation Science Standards are built in, narrowed to the grade you teach on the way in.
+Common Core Math, Common Core English Language Arts and the Next Generation Science Standards all ship with the app, and you can trim a set down to just your grade on the way in.
 
-Save a class as a template to carry a course into next year, or to hand to a colleague who teaches the same thing.
+Save a class as a template to carry a course into next year, or to hand to the teacher down the hall.
 
 ## Your work stays yours
 
-There is no account to make and no server to sign in to.
-Nothing about your students is sent anywhere, because there is nowhere for it to be sent.
+No account, no server, no sign-in.
+Nothing about your students goes anywhere.
 
-There is no save button either — every edit is written down as you make it.
-Dated backups are taken for you, to a folder you choose.
+There is no save button — every edit is written down the moment you make it, and dated backups go to a folder you choose.
 
-It runs as a real program on Windows and macOS, and installs from this page on a Chromebook.
+It runs as a proper app on Windows and macOS, and installs straight from this page on a Chromebook.
 
 ## What it costs
 
-Greatbook is free, and nothing in it is limited or held back.
+Greatbook is free, and everything above is in the free version.
 
-The one part that costs money is keeping a copy of your gradebook in your own Google Drive, so you can pick it up on another computer: <!--price--> once, no subscription.
-[That page](./drive.html) explains what it can and cannot see.
+The one thing you pay for is keeping a copy of your gradebook in your own Google Drive, so you can pick it up on another computer.
+That is <!--price--> once, with no subscription.
+[Here is what it can and cannot see.](./drive.html)
 
 ## Getting started
 
-[Install it](./install.html), then read [the guide](./guide.html).
+[Install it](./install.html), then skim [the guide](./guide.html).
 
-[Where your work is kept](./data.html) is worth reading once before the year gets busy, because it is the page that explains backups.
+[Where your work is kept](./data.html) is the one to read in September, because it covers backups.
 If something has gone wrong, [try here](./help.html).

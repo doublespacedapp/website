@@ -1,125 +1,108 @@
-Greatbook has seven places along the top: Setup, Grades, Benchmarks, Behaviors, Contacts, Trends and Reports.
+Seven tabs along the top: Setup, Grades, Benchmarks, Behaviors, Contacts, Trends and Reports.
 You will spend nearly all your time in Grades.
 
-Three of those tabs are optional and are switched on per class in Setup, so a class that does not need them does not carry them.
+Every tab has a question mark that explains that tab, and Settings has the whole tour.
 
-Every tab has a question mark in its corner that explains that tab, and Settings has the whole tour if you would rather be walked through it.
+## Setup
 
-## Setting up a class
-
-Setup is where you describe a class once, and it has a panel for each part of that.
+Where you describe a class once, with a panel for each part.
 
 <figure class="shot">
   <img src="./shots/setup.png" alt="The Setup tab, with a rail down the left listing Class, Students, Subjects, Grading, Categories, Standards, Behaviors and Contacts, and the Class panel open beside it showing grading periods with start and end dates." width="3200" height="1800" loading="lazy">
   <figcaption>Setup, with the Class panel open.</figcaption>
 </figure>
 
-Class is the name, the grade level, and the grading periods the year is divided into.
-A grading period is a stretch of dates, and they may not overlap, because a score has to belong to exactly one of them.
-This is also where Benchmarks, Behaviors and Contacts are switched on or off for the class.
+**Class** is the name, the grade level, and the grading periods the year is divided into.
+Periods are date ranges and may not overlap.
+Benchmarks, Behaviors and Contacts are switched on or off for the class here.
 
-Students is your roster.
-You can paste a whole list at once rather than typing names one at a time.
+**Students** is your roster, and you can paste a whole list at once.
 
-Subjects are the areas you teach, and they colour and group everything else.
-Each one carries a symbol you choose.
+**Subjects** are the areas you teach, each with a colour and a symbol you choose.
 
-Standards are what you are actually assessing.
-Each one belongs to a subject, and has a short code and a longer description.
+**Standards** are what you are assessing, each belonging to a subject.
 
-Categories are the kinds of work you assign, such as homework, quizzes, or projects.
+**Categories** are the kinds of work you assign — homework, quizzes, projects.
 
-Grading is where you say what each category is worth, and how the levels you record turn into a course grade.
+**Grading** is what each category is worth, and how levels turn into a course grade.
 
-You can change any of this later.
-Nothing is fixed once the year starts.
+Nothing here is fixed once the year starts.
 
-### Bringing a class in rather than typing it
-
-Under Setup, then Class, there are two ways to fill a class without entering it by hand.
+### Bringing a class in
 
 **Google Classroom.** In Classroom, open Classwork, open any assignment, then the gear on the student work page: Download all grades as CSV.
-That one file holds the whole class, and Greatbook reads your roster, your assignments and your marks out of it.
+That one file holds your roster, your assignments and your marks.
 
 Nothing changes until you press Import.
-Before that you are shown what it would do: which assignments it would add, how many marks it would fill in, which students in the file are not in your class, and which marks in the file disagree with marks you have already entered.
-Where they disagree you choose once, for all of them, between keeping yours and taking the file's.
-It never deletes anything, and a file imported a second time updates what is already there instead of duplicating it.
+You see what it will do first, and you pick which version wins when a mark in the file clashes with one of yours.
+It never deletes anything, and you can import the same file again next month to top up what is there.
 
-**A template.** A class saved as a template elsewhere can be opened here, and you choose which parts come with it: subjects, standards, categories, grading settings, assignments, benchmarks, behaviour names, contact methods, students.
-That is how you carry a course into next year, or hand it to a colleague who teaches the same thing.
+**A template.** Open a class saved elsewhere, choosing which parts come with it.
+That is how you carry a course into next year or hand it to a colleague.
 Duplicate does the same within this gradebook.
 
 ### Standards without typing them
 
 <figure class="shot">
   <img src="./shots/standards-import.png" alt="The Import standards dialog, offering Common Core Math with 517 standards in 186 groups, Common Core English Language Arts, the Next Generation Science Standards, or a file; a subject to import into; a grade filter reading Importing grade 4; and a summary reading 59 new, 4 updated, 0 already here." width="3200" height="1800" loading="lazy">
-  <figcaption>Three sets are built in, and the dialog counts what it would change before it changes it.</figcaption>
+  <figcaption>Three sets are built in, and it counts what it would change first.</figcaption>
 </figure>
 
 Setup, then Standards, then Import.
 
 Common Core Math, Common Core English Language Arts and the Next Generation Science Standards are included.
-Each set covers kindergarten through grade 12, so you narrow it to the grade you teach on the way in rather than importing thirteen years of standards into one class.
+Each covers kindergarten through grade 12, so narrow it to the grade you teach on the way in.
 
-If your district has its own, a CSV with columns `code, label, description, parent, grade` works, and so does a CASE package.
+Your district's own standards can be brought in from a file instead.
 
-Like the Classroom import, it counts what it would do first, and importing the same set again updates it in place.
+## Grades
 
-## Entering grades
-
-Grades is a grid: students down the side, assignments across the top.
+Students down the side, assignments across the top.
 
 <figure class="shot">
   <img src="./shots/grid.png" alt="The Grades tab with fourteen assignment columns, each headed with its date, its points and its standard, scores filled in for twenty-four students, some cells marked M in red for missing and Ex for excused, a running grade per student, and a class average row." width="3200" height="1800" loading="lazy">
-  <figcaption>A running grade per student down the left, and a class average along the bottom.</figcaption>
+  <figcaption>A running grade per student, and a class average along the bottom.</figcaption>
 </figure>
 
-It is built to be filled in without a mouse.
-Arrow keys move between cells, typing enters a score, and Enter moves down to the next student, so a stack of papers goes in as fast as you can read them.
+Built to be filled in without a mouse.
+Arrow keys move, typing enters a score, Enter drops to the next student.
 
-Single letters cover the rest.
-Type `m` for missing and `x` to excuse a piece of work, `l` after a score for late, and Delete to clear a cell.
-A panel under the cursor says what the cell you are on will accept, so you do not have to remember which assignment is marked out of what.
+Type m for missing, x to excuse, l after a score for late, Delete to clear.
+A panel under the cursor says what the cell you are on will accept.
 
-An assignment can be scored four ways: out of points, as a percent, as a level, or simply done and not done.
-It can be marked as extra credit, or as not counting toward the grade at all.
+An assignment is scored out of points, as a percent, as a level, or done and not done.
+It can be extra credit, or left out of the grade.
 
-Right-clicking a cell gives the same things as a menu, along with a comment on that one score, which shows as a small corner mark afterwards.
+Right-click a cell to do the same as a menu, or to comment on that one score.
+Blocks of scores copy and paste, and undo covers it in one step.
 
-Whole ranges of scores can be copied, cut and pasted, and undo covers it in one step.
+Subjects, standards, categories and dates filter the grid.
+Narrow to one standard and you are looking at the whole class on that one thing.
+Colour follows performance, so where a class is struggling is visible before you read a number.
 
-Subjects, standards, categories and dates all filter the grid.
-Narrow it to one standard and you are looking at how the whole class is doing on that one thing, in the same grid, with nothing to set up.
-Colour follows performance rather than decoration, so where a class is struggling is visible before you have read a single number.
-
-There is a list layout beside the grid, for working on one assignment at a time rather than the whole class at once.
+There is a list layout beside the grid for working on one assignment at a time.
 
 ## Assignments
 
-An assignment is described where it is created: what it is called, which category it belongs to, which standards it assesses, when it was given, and what it is marked out of.
+An assignment has a name, a category, the standards it assesses, a date and what it is marked out of.
 
-An assignment can cover more than one standard.
-That is the point of keeping standards separate from assignments: one project can tell you something about three different things, and the report card can say so.
+One assignment can cover several standards at once, so a single project can feed three different lines on the report card.
 
-## How a grade is worked out
+## Grading
 
 <figure class="shot">
   <img src="./shots/grading.png" alt="The Grading panel, showing a choice between total points and weighted categories, what missing work counts as, a late penalty with a worked example, rounding, and editable scales for levels and for letter grades." width="3200" height="1800" loading="lazy">
-  <figcaption>Grading, where the rules are yours and are shown working.</figcaption>
+  <figcaption>The rules are yours, and are shown working.</figcaption>
 </figure>
 
-Setup, then Grading.
+Total points or weighted categories, with low scores dropped if you drop them.
 
-A course grade is either total points or weighted categories, and if it is weighted you say what each category is worth and how many low scores are dropped.
+Missing work counts as zero or does not count.
+Late work can cost points, a percentage, or nothing.
+A worked example shows the rule on a real number before a grade depends on it.
 
-Missing work either counts as a zero or does not count at all.
-Late work can be docked a fixed number of points, or a percentage, or nothing; levels and done-or-not are never docked, because there is nothing sensible to take off.
-Whatever you choose, a worked example underneath shows the rule applied to a real number, so you can see what you have just decided before a single grade depends on it.
-
-Two scales are yours to edit: the levels you record against standards, and the letter grades, each with the minimum percent that earns it.
-
-Standards mode turns the whole thing over to levels: every score becomes a level, and no percents or letter grades are shown anywhere.
+Edit the levels and the letter grades yourself.
+Standards mode turns percentages and letter grades off entirely and marks in levels alone.
 
 ## Benchmarks
 
@@ -127,14 +110,13 @@ Tests you give a few times a year to see where students are.
 
 <figure class="shot">
   <img src="./shots/benchmarks.png" alt="The Benchmarks tab: a grid of students against testing sessions, each result coloured by the band it falls into." width="3200" height="1800" loading="lazy">
-  <figcaption>Benchmarks, with each result coloured by the band it falls in.</figcaption>
+  <figcaption>Each result coloured by the band it falls in.</figcaption>
 </figure>
 
-A benchmark is the thing you measure, such as oral reading fluency or multiplication facts in two minutes, and a session is one sitting of it.
-You set the bands yourself, with a colour each, so a raw score reads as approaching or met without your having to remember the cut-offs.
+A benchmark is what you measure — oral reading fluency, multiplication facts in two minutes — and a session is one sitting of it.
 
-Benchmark results stay out of the course grade.
-They are a separate measurement, and mixing them into an average would make both harder to read.
+Set the bands yourself, with a colour each, so a raw score reads as approaching or met.
+Benchmarks stay out of the course grade.
 
 ## Behaviors
 
@@ -142,80 +124,63 @@ A record of what happened and when, for conferences and referrals.
 
 <figure class="shot">
   <img src="./shots/behaviors.png" alt="The Behaviors tab: a grid of students against school days, with red marks for interfering behaviour and green for desired, and a running total for each student." width="3200" height="1800" loading="lazy">
-  <figcaption>Behaviors, a grid of students against school days.</figcaption>
+  <figcaption>Students against school days.</figcaption>
 </figure>
 
-Each record is a student, a day, what happened, and if you want it, what came before it and what followed.
-The words for all of that are yours: Setup has a panel for naming the behaviours, the antecedents and the consequences your school actually uses.
-
-There is a list beside the grid that shows the notes in full.
+Each record is a student, a day, what happened, and if you want it, what came before and what followed.
+Setup has a panel for naming the behaviours your school actually uses.
 
 ## Contacts
 
-A record of calls and emails home, and who you still owe one.
+A log of calls and emails home, with a Last column for who you still owe one.
 
 <figure class="shot">
   <img src="./shots/contacts.png" alt="The Contacts tab: a grid of students against contact methods, with a column showing when each student was last contacted." width="3200" height="1800" loading="lazy">
-  <figcaption>Contacts, with a Last column for who has not heard from you.</figcaption>
+  <figcaption>The Last column is the useful one in March.</figcaption>
 </figure>
 
-The methods are yours to name in Setup, whether that is a phone call, an email, or a note sent home.
-The Last column is the useful one in March, when the question is not who you have spoken to but who you have not.
+Name the methods yourself in Setup — a phone call, an email, a note sent home.
 
 ## Trends
-
-Trends draws what you have already entered over time.
 
 <figure class="shot">
   <img src="./shots/trends.png" alt="The Trends tab: a line chart of one student against three standards with the class average drawn behind, and a histogram underneath showing how the class was spread across one assignment." width="3200" height="1800" loading="lazy">
   <figcaption>One student against three standards, with the class average behind.</figcaption>
 </figure>
 
-It draws from three places, and you choose which: grades, benchmarks, or behaviours.
+Drawn from grades, benchmarks or behaviours, whichever you choose.
 
-For one student it shows whether they are climbing or sliding, standard by standard, up to four standards at once.
-Tick "Compare with class average" and the class is drawn behind them.
-For the class it shows the same thing as an average, so you can see whether a unit landed.
+For one student, whether they are climbing or sliding, up to four standards at once, with the class average behind them if you want it.
+For the class, the same as an average.
 
-Underneath, a histogram shows how the class was spread across a single assignment, with the student you are looking at marked in it.
+Underneath, a histogram shows how the class was spread across a single assignment.
+Every chart has the numbers under a Show table button.
 
-Every chart has a Show table button.
-The numbers behind a picture should not be somewhere you have to go and find.
-
-## Report cards
-
-Report cards give you a page for each student, for each grading period.
+## Reports
 
 <figure class="shot">
   <img src="./shots/report-card.png" alt="A report card for Avery Chen: Math at 64.8 percent, then each standard listed with its own score and level, then a benchmark result, then a box for the report card grade and a comment." width="3200" height="1800" loading="lazy">
-  <figcaption>The course grade, the standards underneath it, and the grade you decide.</figcaption>
+  <figcaption>The course grade, the standards under it, and the grade you decide.</figcaption>
 </figure>
 
-It shows the course grade the assignments add up to, and beside it, where the student stands on each standard.
-Those are different questions and the page keeps them apart on purpose: an average is not the same as knowing whether a student can do something.
+Every student gets a page with the course grade their assignments add up to, and under it how they are doing on each standard.
+You get both pictures at once.
 
-Then there is the grade you decide to give, which is yours and is not calculated, and room for comments.
-A comment you find yourself writing every term can be saved and used again on another card.
+Then you type in the grade you are actually giving, which the app never calculates for you, plus a comment.
+Comments you write every term can be saved and dropped in again.
 
-A report is its own thing, with its own dates, and you can have as many as you like.
-What appears on the card is a setting of that report: grades, standards, categories, benchmarks, behaviours and contacts can each be included or left off.
-A card that goes home to a parent and a card that goes to a meeting are not the same card.
+Build as many reports as you like, each covering its own dates, and tick what goes on the card.
+Make a short one for parents and a fuller one for an IEP meeting.
 
-Where a grade comes from is shown rather than asserted: the category breakdown gives each category's weight, the scores that were dropped, and the arithmetic behind the percent.
+Open up the category breakdown and you can see each weight, which scores were dropped, and the arithmetic behind the percent.
 
-Printing is a button on the card, and what prints is laid out for paper, with ruled lines for a signature and a date.
-
-Finalising a report card fixes what it says, so a grade you have already sent home does not quietly change when you enter a late assignment afterwards.
-You can reopen one later.
-
-## Undo
-
-There is an undo button in the top bar, and it covers what you have done in this session.
-It is there because the fastest way to enter grades is also the fastest way to enter one in the wrong row.
+Printing is one button, laid out for paper with ruled lines for a signature and a date.
+Finalise a card and its grades are frozen, so entering a late assignment next week will not change what you already sent home.
+You can reopen it whenever you want.
 
 ## Trying it first
 
-On the first screen, choose Try a sample class.
+Choose Try a sample class on the first screen.
 
-It fills the app with invented students and invented work so that every screen has something in it, and you can look around without having typed anything real.
-Nothing in it is saved, and it never becomes your gradebook.
+It fills the app with invented students and invented work, so every screen has something in it.
+Nothing is saved, and it never becomes your gradebook.

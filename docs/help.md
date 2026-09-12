@@ -39,10 +39,12 @@ Say yes and the app carries on where it was.
 
 ## My gradebook is empty on this computer
 
-A gradebook is kept per computer, and per browser.
-If you were using the web app, the copy at one address is not the copy at another, so `localhost` and `127.0.0.1` really are two different places.
+Your gradebook lives on one computer, in one browser.
+Opening the app somewhere else gives you an empty one.
 
 If you have a backup file, Settings, then Restore from a file, brings it back.
+
+This is what [Google Drive backup](./drive.html) is for.
 
 ## I made a mess of a column
 
@@ -54,8 +56,9 @@ If the mess is older than that, Settings lists dated backups under Backups, and 
 
 Drive backup is [the premium version](./drive.html), so if you have not bought it, that is why.
 
-If you have bought it and it is still not there, the likeliest reason is that your school has turned off third-party apps for school Google accounts, which many districts do.
-Greatbook notices that and does not offer Drive, rather than offering it and then failing when you take it up.
+If you have bought it and it is still missing, your school has probably turned off outside apps for school Google accounts, which plenty of districts do.
+Greatbook spots that and hides Drive, so you do not sign in and hit a wall.
+Your school's IT people can tell you either way.
 
 ## I bought the premium version and my key has not arrived
 
