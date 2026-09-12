@@ -1,5 +1,5 @@
 Greatbook can keep a copy of your gradebook in your own Google Drive, so you can pick it up on another computer.
-It is switched off until you switch it on, and it is the only part of the app that uses the internet at all.
+It is switched off until you switch it on, and it is the only part of the app that sends your work anywhere.
 
 This is the one part of Greatbook that costs money.
 Everything else is free, nothing is limited, nothing expires, and nothing is held back.
