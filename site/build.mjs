@@ -293,7 +293,13 @@ for (const page of pages) {
 // Written here rather than as another entry in `pages`, because that list describes one
 // flat directory of pages that link to each other with `./name.html`, and this one is not
 // in it: it sits a level up and points down into it.
-const home = marked.parse(await readFile(join(root, 'docs', 'home.md'), 'utf8'), { async: false })
+// Through the same markers as every other page. Nothing on it uses the download table
+// today, but a price written here and left unfilled would reach the site as an HTML
+// comment -- invisible, and wrong in the one place the reader most needs it right.
+let home = marked.parse(await readFile(join(root, 'docs', 'home.md'), 'utf8'), { async: false })
+home = fill(home, '<!--downloads-->', downloadTable(release))
+home = fill(home, '<!--buy-->', buyButton())
+home = fill(home, '<!--price-->', PRICE)
 await writeFile(
   join(out, 'index.html'),
   render({
