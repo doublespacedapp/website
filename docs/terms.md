@@ -1,4 +1,4 @@
-Effective 7 September 2026.
+Effective 12 September 2026.
 
 Greatbook is published under the name Doublespaced by Justin Delano, an individual developer.
 Doublespaced is a trading name rather than an incorporated company, so "the developer" below means that person.
@@ -9,10 +9,39 @@ It is written to be read, not to be impressive.
 
 Use Greatbook for your teaching, on as many of your own devices as you like, for as long as you like.
 Show it to colleagues.
-There is no licence key, no seat count, and no expiry.
+The free version needs no key, has no seat count, and does not expire.
 
 The free features are free and are intended to stay that way.
-Google Drive backup is planned as a paid addition; if that changes, the app will say so before anything you rely on stops working.
+
+## The premium version
+
+Google Drive backup is the one paid feature.
+It is a single payment for a licence that does not expire, with no subscription and no renewal.
+
+The payment is taken by Polar, who are the merchant of record for the sale.
+Their terms cover the transaction; these terms cover the software.
+
+You receive a key by email.
+A key may be activated on up to five devices, and a device can be released again from Settings to free the slot.
+The key is tied to the Google account you sign in with, and is for your own use rather than for sharing or resale.
+
+The app checks the key occasionally, which needs an internet connection now and then.
+If it cannot reach the shop it carries on for a fortnight before Drive backup pauses; nothing has to be bought again, and no other part of the app is affected.
+
+A key may be revoked if it was obtained fraudulently or if the payment for it is reversed.
+
+Anything added to the premium version later is included at no further charge.
+If the premium version is ever discontinued, keys already sold keep working for the versions they were sold for.
+
+### Refunds
+
+If it does not do what this site says it does, write to [support@doublespaced.app](mailto:support@doublespaced.app) within 30 days of buying and you will be refunded.
+You do not have to justify it, and the free version is unaffected either way.
+
+Where the consumer law where you live gives you a longer or stronger right than this, that law applies and nothing here reduces it.
+
+One thing is worth checking before asking: if Drive never appeared at all, your school may have blocked third-party apps for school Google accounts, which [the Google Drive page](./drive.html) describes.
+That is fixable at the school's end and is usually quicker than a refund.
 
 ## What you may not do
 
@@ -49,7 +78,10 @@ Check anything that matters before you act on it, as you would with any tool.
 To the fullest extent the law allows, the developer is not liable for any loss arising from the use of Greatbook.
 That includes lost work, lost data, lost time, and any consequence of a grade that turned out to be wrong.
 
-Since Greatbook is provided free of charge and holds none of your data, this is a statement of what is realistically possible rather than an attempt to disclaim something otherwise owed.
+Greatbook holds none of your data and there is no copy of it anywhere the developer could reach, so this is a statement of what is realistically possible rather than an attempt to disclaim something otherwise owed.
+
+Where the premium version has been paid for, any liability for it is limited to refunding what was paid, and the refund section above says how to ask.
+Nothing here limits liability that the law does not allow to be limited.
 
 ## The unsigned installers
 
@@ -74,4 +106,7 @@ If these terms change, the effective date at the top changes with them, and the 
 
 ## Getting in touch
 
-Questions go to [the issue tracker](https://github.com/doublespacedapp/greatbook/issues).
+Anything about a purchase, a key or a refund: [support@doublespaced.app](mailto:support@doublespaced.app).
+
+Anything about the app itself is better on [the issue tracker](https://github.com/doublespacedapp/greatbook/issues), where other teachers can see the answer too.
+Please do not include real student names or scores in an issue, since issues are public.
