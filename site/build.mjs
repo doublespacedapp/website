@@ -327,7 +327,7 @@ const umbrellaChrome = {
 // One page, with the chrome it belongs to. Split out of the loop below so the company's
 // page and the standing app page can be written the same way rather than each unpicking
 // the template on its own.
-function render({ title, description, nav, footer, content, chrome }) {
+function render({ title, description, nav, footer, content, chrome, heading }) {
   let page = fill(template, '{{wordmark}}', chrome.wordmark)
   page = fill(page, '{{actions}}', chrome.actions)
   page = fill(page, '{{colophon}}', chrome.colophon)
@@ -336,6 +336,8 @@ function render({ title, description, nav, footer, content, chrome }) {
   // from nowhere in particular.
   page = fill(page, '{{siteName}}', chrome.siteName)
   page = fill(page, '{{title}}', title)
+  // The words, unless the caller has a drawing to put there instead.
+  page = fill(page, '{{heading}}', heading ?? title)
   page = fill(page, '{{description}}', escapeAttribute(description))
   // Absolute, and the only absolute link on the site. Everything a reader clicks is
   // relative so the whole subtree can move; this one is read by other people's servers,
@@ -394,10 +396,18 @@ home = fill(home, '<!--buy-->', buyButton())
 home = fill(home, '<!--donate-->', donateButton())
 home = fill(home, '<!--open-->', openButton(`./${productDir}/app/`))
 home = fill(home, '<!--price-->', PRICE)
+// The product's name where the page introduces it, as the mark rather than as a word.
+// Inside the heading rather than instead of it, so the page keeps its shape for a reader
+// who is not looking at it: the drawing carries role="img" and its own title, which is
+// what names the section.
+home = fill(home, '<!--greatbook-mark-->', greatbookLockup)
 await writeFile(
   join(out, 'index.html'),
   render({
     title: UMBRELLA,
+    // The company's own page says its name in its own hand. Everywhere else the heading is
+    // the words, because everywhere else the heading is a sentence rather than a name.
+    heading: doublespacedLockup,
     description: `${UMBRELLA} makes software for teachers. A teacher's work belongs to the teacher.`,
     // Empty. This navigation held exactly one link, to the product, and the product's own
     // lockup in the header beside the company's is now that link -- said once rather than
