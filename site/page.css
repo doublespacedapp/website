@@ -182,6 +182,47 @@ h2 {
   max-width: var(--measure);
 }
 
+/* A heading that is a mark rather than a word.
+ *
+ * Only the company's page does this, and only for the two names -- its own as the page
+ * title and the product's where the page introduces it. A heading whose ink is a drawing
+ * still needs a height, because these carry a viewBox and no dimensions.
+ *
+ * --gb-accent again, so the blue half of the product's mark is the page's link blue and
+ * swaps with the reader's theme. */
+h1 svg,
+h2 svg {
+  display: block;
+  width: auto;
+  --gb-accent: var(--link);
+}
+
+h1 svg {
+  height: 7.5rem;
+}
+
+h2 svg {
+  height: 2.2rem;
+  margin-bottom: 0.15rem;
+}
+
+/* A heading that is a mark loses the rule the other headings sit on, and both reasons are
+ * in the identity.
+ *
+ * No rule goes under the greatbook lockup: it competes with the pencil, and check-beside-
+ * ruled-lines is the to-do list convention half a dozen other apps already use.
+ *
+ * And the studio mark is three rules with the middle one left empty. That empty rule is
+ * the whole design -- it is what makes the skipped line visible and the name true -- so a
+ * fourth rule drawn underneath is not decoration, it is a miscount.
+ *
+ * The space stays: it is the mark's clear space rather than a line of type's descender. */
+h1:has(svg),
+h2:has(svg) {
+  border-bottom: none;
+  padding-bottom: 1.25rem;
+}
+
 h3 {
   font-size: 1.02rem;
   margin: 1.75rem 0 0.5rem;
