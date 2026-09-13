@@ -10,12 +10,23 @@
          message to a colleague, which is how a teacher hears about a tool like this. Left
          out, the link shows as a bare address and says nothing. -->
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="{{siteName}}" />
     <meta property="og:title" content="{{title}}" />
     <meta property="og:description" content="{{description}}" />
     <meta property="og:image" content="{{shareImage}}" />
     <meta name="twitter:card" content="summary_large_image" />
 
     <link rel="stylesheet" href="./page.css" />
+    <!-- Two icons, and the company's is not the product's: each root is given its own by
+         the build. The dark one is a courtesy -- Safari and Firefox honour the media query
+         on an icon link, Chrome ignores it, so it is the better picture where it is read
+         and no worse where it is not. -->
+    <link
+      rel="icon"
+      href="./icon-dark.svg"
+      type="image/svg+xml"
+      media="(prefers-color-scheme: dark)"
+    />
     <link rel="icon" href="./icon.svg" type="image/svg+xml" />
   </head>
   <body>
