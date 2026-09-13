@@ -76,6 +76,18 @@ const SITE = 'https://doublespaced.app'
 const BUY_URL = 'https://buy.polar.sh/polar_cl_f3W79wDbGpq4tljxGl0XRe3wTF0om7H1iGXnk2a7l5h'
 const PRICE = '$14.99'
 
+// Where donations go, which is deliberately not where purchases go.
+//
+// Ko-fi cannot hand back a key, so nothing here is sold: a donation buys the donor nothing
+// and is not a purchase. That is the whole reason the two are separate addresses, and the
+// donate page says so in as many words, because a donation that came with something in
+// return would be a sale, with the tax question that Polar is carrying for the shop.
+//
+// Written here for the same reason the price is: a Ko-fi username can be changed, and the
+// old address is not redirected, so the one that has to be edited should be one line rather
+// than however many pages mention it.
+const KOFI_URL = 'https://ko-fi.com/justindelano'
+
 // The picture shown when a link to any of these pages is pasted somewhere that unfurls it.
 // The grid, because it is the screen a teacher spends the year in and the one that says
 // what this is in a single glance.
@@ -133,6 +145,12 @@ const pages = [
     slug: 'thanks',
     title: 'Thank you',
     description: `Your key is on its way. How to turn on Google Drive backup in ${PRODUCT}.`,
+  },
+  {
+    slug: 'donate',
+    title: 'Supporting the work',
+    footer: 'Support',
+    description: `Ways to pay for ${PRODUCT}: buy the premium version, or donate what you think it is worth.`,
   },
   {
     slug: 'privacy',
@@ -219,6 +237,12 @@ function buyButton() {
   return `<p class="buy"><a class="buy-button" href="${BUY_URL}">Get the premium version</a> <span class="note">${PRICE} once. Your key arrives by email.</span></p>`
 }
 
+// The other thing that asks for money, and the quieter of the two on purpose: a donation is
+// worth less to the reader than a purchase, because a purchase gets them something.
+function donateButton() {
+  return `<p class="buy"><a class="buy-button" href="${KOFI_URL}">Donate on Ko-fi</a> <span class="note">Any amount, once or every month. It does not unlock anything.</span></p>`
+}
+
 function navigation(current) {
   return pages
     .filter((page) => page.nav !== undefined)
@@ -286,6 +310,7 @@ for (const page of pages) {
   const body = marked.parse(source, { async: false })
   let html = fill(body, '<!--downloads-->', downloadTable(release))
   html = fill(html, '<!--buy-->', buyButton())
+  html = fill(html, '<!--donate-->', donateButton())
   html = fill(html, '<!--open-->', openButton('./app/'))
   html = fill(html, '<!--price-->', PRICE)
 
@@ -313,6 +338,7 @@ for (const page of pages) {
 let home = marked.parse(await readFile(join(root, 'docs', 'home.md'), 'utf8'), { async: false })
 home = fill(home, '<!--downloads-->', downloadTable(release))
 home = fill(home, '<!--buy-->', buyButton())
+home = fill(home, '<!--donate-->', donateButton())
 home = fill(home, '<!--open-->', openButton(`./${productDir}/app/`))
 home = fill(home, '<!--price-->', PRICE)
 await writeFile(
