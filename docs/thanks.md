@@ -36,3 +36,5 @@ Polar's receipt also has a link to your own purchase page, where the key can be 
 You will not be charged again. There is no subscription and no renewal.
 
 Anything added to the premium version later is included, at no further charge.
+
+That is the whole of what you owe, and this next part is genuinely optional: if you ever want to put in more than the one payment, [supporting the work](./donate.html) says how.
