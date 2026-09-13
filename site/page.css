@@ -197,8 +197,16 @@ h2 svg {
   --gb-accent: var(--link);
 }
 
-h1 svg {
+/* Two marks of very different shape, so two heights rather than one.
+ *
+ * The studio's is nearly as tall as it is wide; the product's is five times wider than it
+ * is tall. At the height that suits the first, the second runs to 640px and is the page. */
+.heading-mark.studio svg {
   height: 7.5rem;
+}
+
+.heading-mark.product svg {
+  height: 3.75rem;
 }
 
 h2 svg {
