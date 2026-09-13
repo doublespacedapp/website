@@ -88,10 +88,17 @@ const PRICE = '$14.99'
 // than however many pages mention it.
 const KOFI_URL = 'https://ko-fi.com/justindelano'
 
-// The picture shown when a link to any of these pages is pasted somewhere that unfurls it.
-// The grid, because it is the screen a teacher spends the year in and the one that says
-// what this is in a single glance.
-const SHARE_IMAGE = 'shots/grid.png'
+// The picture shown when a link to one of these pages is pasted somewhere that unfurls it.
+//
+// One per identity, and that is the point of it. Every page used to unfurl the same
+// screenshot of the product's grid, the company's own page included -- so sharing the
+// company showed a picture of its product, which is the one thing the two-level structure
+// exists not to say. Each root now carries its own card, drawn from its own mark by
+// scripts/site-brand-assets.mjs in the application repository.
+//
+// Written to the same filename at both roots, so the template holds one string and the
+// build decides which picture is behind it.
+const SHARE_IMAGE = 'card.png'
 
 // Order is the order of the navigation bar. Pages after the divider are reachable from
 // the footer instead, because a teacher looking for help should not have to read past
@@ -281,24 +288,38 @@ function footerLinks() {
 const mark = async (name) => (await readFile(join(root, 'site', 'brand', name), 'utf8')).trim()
 
 const greatbookLockup = await mark('greatbook-lockup-twotone-themed.svg')
-const doublespacedWordmark = await mark('doublespaced-wordmark.svg')
+// The full three-rule lockup, not the compact wordmark. Its middle rule is left empty and
+// that empty rule is the whole design: without it the mark shows two words set far apart
+// and a reader has to take the name on trust. It needs the height to say so, and the
+// company's page is the one header with the room.
+const doublespacedLockup = await mark('doublespaced-lockup.svg')
 
 // The link carries the name for a reader who cannot see the drawing. The SVG has a <title>
 // of its own, but a link whose only content is an image is announced by its own accessible
 // name, and without this it would have none.
 const productChrome = {
   siteName: PRODUCT,
+  shareBase: `/${productDir}`,
+  shareAlt: `The ${PRODUCT} mark: a pencil that has just drawn a check, with a plus.`,
   wordmark: `<a class="wordmark" href="./" aria-label="${PRODUCT}">${greatbookLockup}</a>`,
   actions: `<a class="open-app" href="./app/">Open the web app</a>`,
   colophon: `${PRODUCT} is made by <a href="../">${UMBRELLA}</a>. Copyright {{year}}.`,
 }
 
-// The compact wordmark, not the three-rule lockup. The lockup's empty middle rule is the
-// whole joke and it needs 160px and a great deal of height to tell it; this says the same
-// thing with the rule drawn between the two words, at the height of a navigation bar.
+// Both marks, in the order the company is built: the studio, then the one product under
+// it. The product's mark is the link into the product, which is what the single text link
+// in the navigation used to be and says more plainly than a word could.
+//
+// A rule between them rather than a gap alone -- it is the studio's own device, and it
+// keeps two marks of different weights from reading as one composite mark.
 const umbrellaChrome = {
   siteName: UMBRELLA,
-  wordmark: `<a class="wordmark studio" href="./" aria-label="${UMBRELLA}">${doublespacedWordmark}</a>`,
+  shareBase: '',
+  shareAlt: `The ${UMBRELLA} mark: the two words set on ruled lines, with a line skipped between them.`,
+  wordmark:
+    `<a class="wordmark studio" href="./" aria-label="${UMBRELLA}">${doublespacedLockup}</a>` +
+    `<span class="mark-divider" aria-hidden="true"></span>` +
+    `<a class="wordmark" href="./${productDir}/" aria-label="${PRODUCT}">${greatbookLockup}</a>`,
   actions: '',
   colophon: `${UMBRELLA} is Justin Delano. Copyright {{year}}.`,
 }
@@ -317,9 +338,13 @@ function render({ title, description, nav, footer, content, chrome }) {
   page = fill(page, '{{title}}', title)
   page = fill(page, '{{description}}', escapeAttribute(description))
   // Absolute, and the only absolute link on the site. Everything a reader clicks is
-  // relative so the whole subtree can move; these two are read by other people's servers,
+  // relative so the whole subtree can move; this one is read by other people's servers,
   // which have no page to be relative to.
-  page = fill(page, '{{shareImage}}', `${SITE}/${productDir}/${SHARE_IMAGE}`)
+  //
+  // The chrome says which root the page belongs to, so the company's page unfurls the
+  // company's card and the product's pages unfurl the product's.
+  page = fill(page, '{{shareImage}}', `${SITE}${chrome.shareBase}/${SHARE_IMAGE}`)
+  page = fill(page, '{{shareImageAlt}}', escapeAttribute(chrome.shareAlt))
   page = fill(page, '{{nav}}', nav)
   page = fill(page, '{{footer}}', footer)
   page = fill(page, '{{content}}', content)
@@ -374,7 +399,10 @@ await writeFile(
   render({
     title: UMBRELLA,
     description: `${UMBRELLA} makes software for teachers. A teacher's work belongs to the teacher.`,
-    nav: `<a href="./${productDir}/" aria-current="page">${PRODUCT}</a>`,
+    // Empty. This navigation held exactly one link, to the product, and the product's own
+    // lockup in the header beside the company's is now that link -- said once rather than
+    // twice on a page with only two things on it.
+    nav: '',
     footer: pages
       .filter((page) => page.footer !== undefined)
       .map((page) => `<a href="./${productDir}/${page.slug}.html">${page.footer}</a>`)
@@ -414,6 +442,22 @@ await copyFile(join(root, 'site', 'brand', 'greatbook-icon.svg'), join(productOu
 // The product's tile is a white mark on its own blue and needs no second version; the
 // dark name is still written so that the one link in the template resolves at both roots.
 await copyFile(join(root, 'site', 'brand', 'greatbook-icon.svg'), join(productOut, 'icon-dark.svg'))
+
+// The rasters, which the site cannot make for itself: this build is marked, one pass, no
+// image tooling. They are rendered from the same drawings by scripts/site-brand-assets.mjs
+// in the application repository and committed into site/brand.
+//
+// Same three names at both roots, different pictures behind them, so the template holds
+// one string for each and the build decides which identity it means.
+const rasters = [
+  ['card', 'card.png'],
+  ['apple-touch', 'apple-touch-icon.png'],
+  ['favicon', 'favicon-32.png'],
+]
+for (const [prefix, name] of rasters) {
+  await copyFile(join(root, 'site', 'brand', `${prefix}-doublespaced.png`), join(out, name))
+  await copyFile(join(root, 'site', 'brand', `${prefix}-greatbook.png`), join(productOut, name))
+}
 
 // The screenshots, which are the one thing here that is not copied twice.
 //
@@ -478,5 +522,7 @@ await writeFile(
     // resolves on every page but this one, and 404s with no error anywhere.
     .replaceAll('href="./page.css"', 'href="../page.css"')
     .replaceAll('href="./icon.svg"', 'href="../icon.svg"')
-    .replaceAll('href="./icon-dark.svg"', 'href="../icon-dark.svg"'),
+    .replaceAll('href="./icon-dark.svg"', 'href="../icon-dark.svg"')
+    .replaceAll('href="./favicon-32.png"', 'href="../favicon-32.png"')
+    .replaceAll('href="./apple-touch-icon.png"', 'href="../apple-touch-icon.png"'),
 )
