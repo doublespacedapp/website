@@ -5,12 +5,14 @@ Every tab has a question mark that explains that tab, and Settings has the whole
 
 ## Setup
 
-This is where you describe a class, once, and each part of it has its own panel.
+This is where you describe a class, once, at the start of the year.
 
 <figure class="shot">
   <img src="./shots/setup.png" alt="The Setup tab, with a rail down the left listing Class, Students, Subjects, Grading, Categories, Standards, Behaviors and Contacts, and the Class panel open beside it showing grading periods with start and end dates." width="3200" height="1800" loading="lazy">
   <figcaption>Setup, with the Class panel open.</figcaption>
 </figure>
+
+Six panels, down the rail on the left, each covering one part of the class:
 
 - **Class** is the name, the grade level, and the grading periods the year is divided into. Periods are date ranges and may not overlap. Benchmarks, Behaviors and Contacts are switched on or off for the class here.
 - **Students** is your roster, and you can paste a whole list at once.

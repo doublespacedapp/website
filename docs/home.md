@@ -14,8 +14,10 @@ A gradebook for teachers of any grade, from kindergarten through twelfth.
   <figcaption>The Grades tab. Report cards, trends and averages are all worked out from what you type here.</figcaption>
 </figure>
 
-Students run down the side and assignments across the top, and you fill it in from the keyboard without reaching for the mouse.
+Students run down the side and assignments across the top, and everything else is worked out from what you type into it:
 
+- Assignments and grades entered from the keyboard, with missing, excused and late
+- Course grades by total points or by weighted categories, under rules you set
 - Report cards with the course grade, each standard under it, and the grade you decide
 - Standards on every assignment, and a grid you can filter down to one of them
 - Rosters and marks brought over from Google Classroom, with Common Core and NGSS built in

@@ -12,7 +12,9 @@ Hit Try a sample class on the first screen to poke around a full class without t
 
 ## Everything it does
 
-- Mark from the keyboard, with arrow keys, missing, excused and late
+Greatbook is a grid of students against assignments, and everything else works up from what you type into it.
+
+- Assignments and grades entered from the keyboard, with arrow keys, missing, excused and late
 - Score out of points, as a percent, as a level, or done and not done
 - Course grades by total points or by weighted categories
 - Your own levels, letter cut-offs, late penalty and missing-work rule
@@ -113,13 +115,15 @@ You pick the wording your school uses.
 
 ## Grades worked out your way
 
-You set the rules, and the app shows each one applied to a real score while you are setting it, so you can check it before any grade depends on it.
+Five things you decide, rather than the app deciding them for you:
 
 - Total points, or weighted categories
 - What missing work counts as
 - What late work costs, as points or as a percentage
 - Your own levels and letter grade cut-offs
 - Dropping the lowest few scores in a category
+
+As you set each one, the app shows it applied to a real score, so you can check the rule before any grade depends on it.
 
 Or switch percentages off completely and mark everything in levels.
 

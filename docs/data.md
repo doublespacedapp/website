@@ -12,7 +12,7 @@ The file catches up as soon as it can, and the app tells you when that has happe
 
 ## Where the copies are
 
-Settings, under Sync, lists every copy, says where each one is, and lets you move it.
+Your gradebook is kept in up to three places at once, and Settings, under Sync, lists them, says where each one is, and lets you move it.
 
 - **In the app**, on this computer. This copy is always there.
 - **A file of your own.** On Windows and macOS this is switched on from the first time you open the app, in your Documents folder. On a Chromebook you pick the file yourself.

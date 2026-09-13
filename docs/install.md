@@ -32,6 +32,8 @@ The only real difference is where your gradebook file can live, which [the next 
 
 ## Which one should I use
 
+It depends on the computer you mark on, and there is no wrong answer between them.
+
 - **A school Windows laptop or a Mac.** Take the installer. It writes your gradebook straight into your Documents folder with nothing to set up.
 - **A Chromebook.** Install it from the web.
 - **Firefox or Safari.** Take the installer. Neither browser can give a web app permission to write to a file on your computer, so the web app has nowhere to keep your gradebook and will ask you for Chrome or Edge.
