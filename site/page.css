@@ -94,16 +94,26 @@ header {
   width: auto;
 }
 
-/* Doublespaced is two words with a rule between them and no colour at all, and it needs
- * the room. Its floor is 110px wide, which for this drawing's proportions is 4rem tall:
- * the rule is two units of a 121-unit drawing, so anything shorter puts it under one
- * device pixel on an ordinary screen and greys it out -- the studio's name as a smudge.
+/* The studio lockup is three rules with the middle one empty, and it is nearly as tall as
+ * it is wide. Its floor is 160px across, which for this drawing is 6rem tall -- below that
+ * the rules grey out and the two words stop cohering as one object, which is the exact
+ * failure the mark is about.
  *
- * That makes the company's header taller than the product's. It is one page with one mark
- * on it, and the alternative was showing the mark at a size it was drawn not to be shown
- * at. */
+ * That makes the company's header taller than the product's. It is one page, carrying two
+ * marks and no navigation, and the alternative was showing a mark at a size it was drawn
+ * not to be shown at. */
 .wordmark.studio svg {
-  height: 4rem;
+  height: 6rem;
+}
+
+/* Between the company's mark and the product's. The studio's own device, at the weight the
+ * page uses for a hairline, so the two marks read as two things rather than one composite
+ * one. */
+.mark-divider {
+  align-self: stretch;
+  width: 1px;
+  min-height: 2.5rem;
+  background: var(--edge);
 }
 
 header nav {
@@ -113,10 +123,15 @@ header nav {
   flex: 1;
 }
 
+/* The underline that marks the current page is a bottom border, so it sits inside the
+ * link's box and pushes the words 2px above the middle of it. Centring the boxes then
+ * leaves the navigation sitting above the wordmark beside it -- measurably: the words'
+ * baseline landed at 39 against the mark's at 41. The padding is made asymmetric by the
+ * height of the border so that the text, rather than the box, is what is centred. */
 header nav a {
   color: var(--quiet);
   text-decoration: none;
-  padding: 0.15rem 0;
+  padding: calc(0.15rem + 2px) 0 0.15rem;
   border-bottom: 2px solid transparent;
 }
 
@@ -140,15 +155,31 @@ main {
   padding: 2.5rem 1.5rem 4rem;
 }
 
+/* The page title, sitting on a rule.
+ *
+ * The rule is the studio's device and this is where it does more work than it could
+ * inside a logo: the marks are two words on ruled paper, and a page of writing set on the
+ * same paper says the two came from one hand without repeating the logo anywhere.
+ *
+ * Under the title rather than over it, so it reads as the line the title is written on and
+ * not as a border dividing the page from its own header. */
 h1 {
   font-size: 1.75rem;
   line-height: 1.25;
   margin: 0 0 1.5rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid var(--edge);
 }
 
+/* And a shorter one for each section, which is the same rule stopping where the heading
+ * stops. Quieter than the title's: a page of writing with a full-width line above every
+ * section reads as a page of forms. */
 h2 {
   font-size: 1.2rem;
   margin: 2.5rem 0 0.75rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--edge);
+  max-width: var(--measure);
 }
 
 h3 {
