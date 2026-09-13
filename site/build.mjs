@@ -200,6 +200,19 @@ function downloadTable(release) {
   return `<table class="downloads"><caption>Version ${release.version}</caption><tbody>\n${body}\n</tbody></table>`
 }
 
+// Opening the app, which is the one thing the site offers that costs nothing: a tab, with
+// no download, no account and no administrator. The same shape as the buy button below and
+// deliberately no louder, for the reason given there.
+//
+// Takes the path because the two pages this can appear on sit at different depths: the app
+// is ./app/ from a Greatbook page and ./greatbook/app/ from the company's. Wired into both
+// fills rather than only the page using it today, because a marker reaching a page nothing
+// fills survives into the HTML as a comment -- invisible from the page itself, and so the
+// kind of mistake that is found by a reader rather than by a build.
+function openButton(appPath) {
+  return `<p class="buy"><a class="buy-button" href="${appPath}">Open the web app</a> <span class="note">In your browser, with nothing to download and nothing to sign up for.</span></p>`
+}
+
 // The one thing on the site that asks for money, so it is written once and looks the same
 // wherever the prose puts it.
 function buyButton() {
@@ -273,6 +286,7 @@ for (const page of pages) {
   const body = marked.parse(source, { async: false })
   let html = fill(body, '<!--downloads-->', downloadTable(release))
   html = fill(html, '<!--buy-->', buyButton())
+  html = fill(html, '<!--open-->', openButton('./app/'))
   html = fill(html, '<!--price-->', PRICE)
 
   await writeFile(
@@ -299,6 +313,7 @@ for (const page of pages) {
 let home = marked.parse(await readFile(join(root, 'docs', 'home.md'), 'utf8'), { async: false })
 home = fill(home, '<!--downloads-->', downloadTable(release))
 home = fill(home, '<!--buy-->', buyButton())
+home = fill(home, '<!--open-->', openButton(`./${productDir}/app/`))
 home = fill(home, '<!--price-->', PRICE)
 await writeFile(
   join(out, 'index.html'),
