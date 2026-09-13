@@ -290,3 +290,31 @@ footer nav {
 footer p {
   margin: 0;
 }
+
+/* Lists.
+ *
+ * Used where the content is genuinely a set of separate things a teacher wants to scan
+ * rather than read — what the app does, which scoring modes exist, what a rule can be set
+ * to. Prose is still the default for anything with an argument or an order to it, because
+ * a page made entirely of bullets is as hard to read as one made entirely of paragraphs. */
+ul {
+  margin: 1rem 0;
+  padding-left: 1.3rem;
+}
+
+li {
+  margin-bottom: 0.45rem;
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
+
+/* A nested list is a detail of the bullet above it, so it sits closer and lighter. */
+li ul {
+  margin: 0.45rem 0 0;
+}
+
+li li {
+  color: var(--quiet);
+}
