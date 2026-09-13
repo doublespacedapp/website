@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="greatbook">
+  <title>greatbook</title>
+  <clipPath id="tile"><rect width="64" height="64" rx="12"/></clipPath><g clip-path="url(#tile)"><rect width="64" height="64" fill="#0b57d0"/>
+  <g transform="translate(32 32) scale(0.8791) translate(-32 -32)">
+<g transform="translate(0.39 2.33) scale(1.09)">
+  <g fill="#ffffff"><path d="M19.43 43.95L27.87 38.87L21.32 34.29Z"/><path d="M28.79 37.56L39.52 22.25L32.96 17.66L22.24 32.97Z"/><path d="M40.43 20.93L41.35 19.62L34.80 15.04L33.88 16.35Z"/><path d="M42.27 18.31L44.79 14.71L38.24 10.12L35.72 13.72Z"/></g>
+  <g fill="none" stroke="#ffffff" stroke-width="2.8" stroke-linecap="round"><path d="M3.68 30.64C4.16 39.96 15.17 40.03 18.00 46.00"/></g>
+  <g fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round"><path d="M51.19 8.11L51.19 14.91"/><path d="M47.79 11.51L54.59 11.51"/></g>
+  </g>
+  </g>
+</g>
+</svg>
