@@ -157,6 +157,8 @@ You pay only for one thing: keeping a copy of your gradebook in your own Google 
 That is <!--price--> once, with no subscription.
 [Here is what it can and cannot see.](./drive.html)
 
+If you do not need that and would still like to put something in, [there is a page for supporting the work](./donate.html).
+
 ## Getting started
 
 [Install it](./install.html), then skim [the guide](./guide.html).
