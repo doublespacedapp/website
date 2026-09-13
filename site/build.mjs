@@ -46,6 +46,15 @@ const productOut = join(out, productDir)
 // release yet rather than an error anybody sees.
 const repo = process.env.RELEASES_REPOSITORY ?? 'doublespacedapp/greatbook'
 
+// What the premium version costs, and where it is bought.
+//
+// Here rather than in the app, because a price should not need a release to change: the
+// app never states it, and the checkout page is Polar's own. The checkout link is public
+// by design -- it is the page a teacher is sent to -- as is the organization id the app
+// is built with.
+const PRICE = '$14.99'
+const BUY_URL = 'https://buy.polar.sh/polar_cl_f3W79wDbGpq4tljxGl0XRe3wTF0om7H1iGXnk2a7l5h'
+
 // Order is the order of the navigation bar. Pages after the divider are reachable from
 // the footer instead, because a teacher looking for help should not have to read past
 // two policies to find it.
@@ -112,6 +121,13 @@ function downloadTable(release) {
   return `<table class="downloads"><caption>Version ${release.version}</caption><tbody>\n${body}\n</tbody></table>`
 }
 
+// The buy button, written where the marker sits so the prose around it stays prose. The
+// same shape as the download table above, and for the same reason: the page says what the
+// thing is, and the one generated line says what it costs and where to get it.
+function priceBlock() {
+  return `<p class="download-row"><a class="download" href="${BUY_URL}">Get the premium version</a> <span class="note">${PRICE}, once. Not a subscription.</span></p>`
+}
+
 function navigation(current) {
   return pages
     .filter((page) => page.nav !== undefined)
@@ -172,7 +188,11 @@ await mkdir(productOut, { recursive: true })
 for (const page of pages) {
   const source = await readFile(join(root, 'docs', `${page.slug}.md`), 'utf8')
   const body = marked.parse(source, { async: false })
-  const html = fill(body, '<!--downloads-->', downloadTable(release))
+  const html = fill(
+    fill(body, '<!--downloads-->', downloadTable(release)),
+    '<!--price-->',
+    priceBlock(),
+  )
 
   await writeFile(
     join(productOut, `${page.slug}.html`),

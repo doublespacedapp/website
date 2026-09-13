@@ -1,8 +1,13 @@
 Greatbook can keep a copy of your gradebook in your own Google Drive, so you can pick it up on another computer.
 It is switched off until you switch it on, and it is the only part of the app that uses the internet at all.
 
-This is planned as the paid addition to an otherwise free app.
-It is not switched on for teachers yet, so if you do not see it in Settings, that is why.
+This is the premium version, and it is the one part of Greatbook that costs anything.
+Everything else is free, nothing expires, and nothing else is held back.
+
+<!--price-->
+
+Buying gives you a key. Paste it into Settings and Drive appears.
+The key is yours for good: one payment, no renewal, and no second charge ever.
 
 ## What it actually does
 
