@@ -3,7 +3,7 @@ Doublespaced makes software for teachers.
 Everything here is built on the same idea, which is that a teacher's records are the teacher's.
 There is no account to make, nothing of yours is kept on our computers, and it all works the same with the Wi-Fi off.
 
-## Greatbook
+## <!--greatbook-mark-->
 
 A gradebook for teachers of any grade, from kindergarten through twelfth.
 
