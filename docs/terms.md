@@ -10,7 +10,7 @@ Use Greatbook for your teaching, on as many of your own devices as you like, for
 Show it to colleagues.
 The free version needs no key, has no seat count, and does not expire.
 
-The free features are free and are intended to stay that way.
+There are no plans to move features that are free today behind the key.
 
 ## The premium version
 
@@ -67,17 +67,15 @@ Grades that must be reported officially should be entered wherever your school r
 
 ## No warranty
 
-Greatbook is provided as it is, with no warranty of any kind, express or implied.
+Greatbook is provided "as is" and "as available", with no warranty of any kind, express or implied, including any implied warranty of merchantability or fitness for a particular purpose.
 
-It is not promised to be free of defects, to be available, to be fit for any particular purpose, or to calculate any grade correctly.
+In plainer words: it is not promised to be free of defects, to be available, to be fit for any particular purpose, or to calculate any grade correctly.
 Check anything that matters before you act on it.
 
 ## Limitation of liability
 
 To the fullest extent the law allows, the developer is not liable for any loss arising from the use of Greatbook.
 That includes lost work, lost data, lost time, and any consequence of a grade that turned out to be wrong.
-
-Greatbook holds none of your data and there is no copy of it anywhere the developer could reach, so this is a statement of what is realistically possible rather than an attempt to disclaim something otherwise owed.
 
 Where the premium version has been paid for, any liability for it is limited to refunding what was paid, and the refund section above says how to ask.
 Nothing here limits liability that the law does not allow to be limited.

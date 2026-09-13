@@ -38,13 +38,15 @@ It cannot list your Drive or read your other files.
 Greatbook writes your gradebook file into your Drive, directly from your device.
 It does not pass through any server operated by the developer.
 
-The app keeps a Google access token on your device so that it can continue writing without asking you again.
-That token stays on the device and is discarded when you turn Drive backup off.
+The app keeps a Google sign-in token on your device so that it can continue writing without asking you again.
+In the browser that token lasts about an hour and is held only for as long as the tab is open; the desktop app keeps one that lets it renew without asking you each time.
+Turning Drive backup off deletes the token from the device. That does not withdraw the permission at Google's end, which you can do from the link below.
 
 Greatbook's use of information received from Google APIs adheres to the [Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy), including the Limited Use requirements.
 
 The Google data the app touches is used only to provide the backup feature you asked for.
-It is never transferred to anyone, never used for advertising, never sold, and never read by a human.
+It is not sold, not used for advertising, and not transferred to anyone except where that Policy allows it.
+In practice there is nowhere for it to go: it never leaves your device for anywhere but your own Drive, and the developer has no copy of it to transfer.
 
 You can withdraw the permission at any time, from Settings inside the app or from [your Google account](https://myaccount.google.com/permissions).
 
@@ -55,7 +57,7 @@ That means the sale is theirs: Polar takes the payment, handles the tax, and hol
 
 Polar receives your email address and your payment details, under [their own privacy policy](https://polar.sh/legal/privacy).
 The developer never sees a card number.
-In Polar's dashboard, the developer can see the order: an email address, the country it was taxed in, and which key belongs to it.
+In Polar's dashboard, the developer can see the order: the email address you bought with, where it was taxed, which key belongs to it, and the usual commercial details of a sale. Nothing there concerns a student.
 
 Nothing about your students is part of that, and no gradebook data of any kind passes through the shop.
 
@@ -75,14 +77,17 @@ Releasing a device, with "Remove this key from this computer", sends the key and
 
 ## Student data, and who is responsible for it
 
-Greatbook is a tool a teacher runs on their own device, in the way a spreadsheet is.
+Greatbook runs locally, on a teacher's own device.
 The information you enter about students never reaches the developer, so the developer is not in a position to disclose it, lose it, or be compelled to hand it over.
 
 Responsibility for the student information you enter rests with you and your school or district, under whatever policies and laws apply to you, which in the United States generally means FERPA and any state student privacy law.
-Because the data stays in your possession, using Greatbook does not create a disclosure of student records to a third party.
+Because the information stays in your possession, the developer is never a recipient of it.
+Whether any of this affects your obligations is a question for your school or district rather than one this page can answer. If you turn on Drive backup with a school Google account, that copy sits in your school's own Google Workspace, under whatever agreement your district already has with Google.
 
 If your district requires a data processing agreement or a vendor privacy review before software may hold student information, please raise this page with them.
 The short version to give them is that no student data leaves the teacher's device except, optionally, into the teacher's own Google Drive, and that the only other traffic the app makes is a licence check and a version check, neither of which carries anything about a student.
+
+The version check asks GitHub, where the app is published, whether there is a newer release. GitHub sees that request the way it sees any download, including the IP address it came from, as described in the [GitHub Privacy Statement](https://docs.github.com/site-policy/privacy-policies/github-privacy-statement). It carries nothing about you and nothing about your gradebook. Settings has a switch to stop the app checking at all.
 
 Greatbook is not directed at children, and it is not intended for students to use.
 It is a tool for teachers, who enter information about their students.
