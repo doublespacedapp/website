@@ -10,6 +10,29 @@ Hit Try a sample class on the first screen to poke around a full class without t
   <figcaption>The Grades tab. Report cards, trends and averages are all worked out from what you type here.</figcaption>
 </figure>
 
+## Everything it does
+
+- Mark from the keyboard, with arrow keys, missing, excused and late
+- Score out of points, as a percent, as a level, or done and not done
+- Extra credit, and assignments kept out of the grade
+- Comments on any single score, copy and paste, and undo
+- Standards on every assignment, more than one where a project covers more than one
+- Filter the grid to one standard, one subject, one category or one stretch of dates
+- Cells shaded by how well students did
+- Course grades by total points or weighted categories, dropping the lowest if you want
+- Your own levels, letter cut-offs, late penalty and missing-work rule
+- Report cards with the course grade, every standard under it, and the grade you decide
+- A comment bank, so last term's wording is there when you need it again
+- As many report layouts as you like, each covering its own dates, laid out for printing
+- Trends for one student or the whole class, with the class average behind
+- Benchmarks, behaviour records and a contact log, switched on per class
+- Rosters pasted in whole, or brought over from a Google Classroom download
+- Common Core Math, Common Core English Language Arts and NGSS built in, plus CSV and CASE import
+- Classes saved as templates, to reuse next year or hand to a colleague
+- Works offline, keeps every score in a file you own, and takes dated backups by itself
+
+Each of those is covered below.
+
 ## Marking
 
 Students down the side, assignments across the top.
@@ -18,10 +41,14 @@ You never need the mouse: arrow keys move around, typing enters a score, Enter d
 Type m for missing, x to excuse a piece of work, and stick an l after a score for late work.
 A whole stack of papers goes in about as fast as you can read them.
 
-Score things out of points, as a percent, as a level, or just done and not done.
-Flag an assignment as extra credit, or keep it out of the grade entirely.
+An assignment can be scored:
 
-You can comment on any single score, copy and paste whole blocks of scores, and undo anything you have just done.
+- Out of points
+- As a percent
+- As a level
+- As done and not done
+
+You can also flag one as extra credit, or keep it out of the grade entirely, comment on any single score, copy and paste whole blocks of scores, and undo anything you have just done.
 
 ## Standards
 
@@ -83,25 +110,27 @@ You pick the wording your school uses.
 
 ## Grades worked out your way
 
-Total points or weighted categories, and you can drop the lowest few scores in a category if you want to.
+You set the rules, and the app shows each one applied to a real score while you are setting it, so you can check it before any grade depends on it.
 
-Decide what missing work counts as and what late work costs.
-The app shows you the rule applied to a real number while you are setting it, so you can check it before any grade depends on it.
+- Total points, or weighted categories
+- Dropping the lowest few scores in a category
+- What missing work counts as
+- What late work costs, as points or as a percentage
+- Your own levels and letter grade cut-offs
 
-Edit the levels and the letter grade cut-offs yourself.
 Or switch percentages off completely and mark everything in levels.
 
 ## Starting the year without typing
 
-Paste your whole roster in at once.
+There are four ways to fill a class without typing it in:
 
-If you are already grading in Google Classroom, the grades file it downloads brings the students, the assignments and the marks over in one go.
-You see exactly what it will do first, and you decide which version wins when a mark clashes with one of yours.
-It never deletes anything.
+- Paste your whole roster at once
+- Import a Google Classroom grades download, which brings the students, the assignments and the marks together
+- Import standards: Common Core Math, Common Core English Language Arts and NGSS ship with the app, or bring your own from a CSV or a CASE package
+- Open a class template you saved last year, or one a colleague sent you
 
-Common Core Math, Common Core English Language Arts and the Next Generation Science Standards all ship with the app, and you can trim a set down to just your grade on the way in.
-
-Save a class as a template to carry a course into next year, or to hand to the teacher down the hall.
+An import shows you exactly what it will do first, and you decide which version wins when a mark clashes with one of yours.
+Nothing is ever deleted by one, and you can trim a standards set down to just your grade on the way in.
 
 ## Your work stays yours
 

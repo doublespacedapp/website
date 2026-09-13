@@ -14,15 +14,9 @@ The file catches up as soon as it can, and the app tells you when that has happe
 
 Settings, under Sync, lists every copy, says where each one is, and lets you move it.
 
-**In the app**, on this computer.
-This copy is always there.
-
-**A file of your own.**
-On Windows and macOS this is switched on from the first time you open the app, in your Documents folder.
-On a Chromebook you pick the file yourself.
-
-**Google Drive**, which is optional and the one part that costs money, at <!--price--> once.
-[It has its own page](./drive.html).
+- **In the app**, on this computer. This copy is always there.
+- **A file of your own.** On Windows and macOS this is switched on from the first time you open the app, in your Documents folder. On a Chromebook you pick the file yourself.
+- **Google Drive**, which is optional and the one part that costs money, at <!--price--> once. [It has its own page](./drive.html).
 
 All of these hold the same gradebook.
 The app keeps them in step for you, and only asks you to choose when the same gradebook has been changed in two places since they were last in step.

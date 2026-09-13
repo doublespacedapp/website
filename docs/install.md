@@ -32,16 +32,10 @@ The only real difference is where your gradebook file can live, which [the next 
 
 ## Which one should I use
 
-On a school Windows laptop or a Mac, take the installer.
-It writes your gradebook straight into your Documents folder with nothing to set up.
-
-On a Chromebook, install it from the web.
-
-In Firefox or Safari, take the installer.
-Firefox and Safari cannot give a web app permission to write to a file on your computer, so the web app has nowhere to keep your gradebook. It will ask you for Chrome or Edge.
-
-On someone else's computer, or for a look, open the web app and choose Try a sample class.
-Nothing is saved anywhere you would have to clean up.
+- **A school Windows laptop or a Mac.** Take the installer. It writes your gradebook straight into your Documents folder with nothing to set up.
+- **A Chromebook.** Install it from the web.
+- **Firefox or Safari.** Take the installer. Neither browser can give a web app permission to write to a file on your computer, so the web app has nowhere to keep your gradebook and will ask you for Chrome or Edge.
+- **Someone else's computer, or just a look.** Open the web app and choose Try a sample class. Nothing is saved anywhere you would have to clean up.
 
 ## Updating
 

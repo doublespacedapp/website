@@ -15,13 +15,15 @@ A gradebook for teachers of any grade, from kindergarten through twelfth.
 </figure>
 
 Students run down the side and assignments across the top, and you fill it in from the keyboard without reaching for the mouse.
-Colour the columns by subject, filter the grid to one standard, print a report card for each student, and chart how the year has gone.
-If a class needs them, you can also switch on benchmark tests, a behaviour record and a log of calls home.
 
-A year can start without typing a roster or a standard: Google Classroom's grades download brings a class in whole, and Common Core and the Next Generation Science Standards are built in.
+- Standards on every assignment, and a grid you can filter down to one of them
+- Report cards with the course grade, each standard under it, and the grade you decide
+- Trends for one student or the whole class
+- Benchmarks, a behaviour record and a contact log, switched on per class
+- Rosters and marks brought over from Google Classroom, with Common Core and NGSS built in
+- Works offline, and keeps every score in a file you own
 
-It runs on Windows and macOS and installs from the web on a Chromebook.
-It works offline and keeps every score in a file you own.
+It runs on Windows and macOS, and installs from the web on a Chromebook.
 
 Greatbook is free.
 Keeping a copy in your own Google Drive costs <!--price-->, once, and that is the only thing you ever pay for.

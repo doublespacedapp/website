@@ -12,19 +12,12 @@ This is where you describe a class, once, and each part of it has its own panel.
   <figcaption>Setup, with the Class panel open.</figcaption>
 </figure>
 
-**Class** is the name, the grade level, and the grading periods the year is divided into.
-Periods are date ranges and may not overlap.
-Benchmarks, Behaviors and Contacts are switched on or off for the class here.
-
-**Students** is your roster, and you can paste a whole list at once.
-
-**Subjects** are the areas you teach, each with a colour and a symbol you choose.
-
-**Standards** are what you are assessing, each belonging to a subject.
-
-**Categories** are the kinds of work you assign — homework, quizzes, projects.
-
-**Grading** is what each category is worth, and how levels turn into a course grade.
+- **Class** is the name, the grade level, and the grading periods the year is divided into. Periods are date ranges and may not overlap. Benchmarks, Behaviors and Contacts are switched on or off for the class here.
+- **Students** is your roster, and you can paste a whole list at once.
+- **Subjects** are the areas you teach, each with a colour and a symbol you choose.
+- **Standards** are what you are assessing, each belonging to a subject.
+- **Categories** are the kinds of work you assign — homework, quizzes, projects.
+- **Grading** is what each category is worth, and how levels turn into a course grade.
 
 You can change any of this later; nothing here is locked once the year is under way.
 
