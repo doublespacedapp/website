@@ -7,6 +7,13 @@ Nothing here asks for an account, keeps your data on someone else's computer, or
 
 A gradebook for teachers of any grade, from kindergarten through twelfth.
 
+<!--open-->
+
+<figure class="shot">
+  <img src="./greatbook/shots/grid.png" alt="The Grades tab: students down the side, assignments across the top, each column coloured by subject and labelled with the standard it assesses, and a class average along the bottom." width="3200" height="1800" loading="lazy">
+  <figcaption>Grades. Every other tab reads from this one.</figcaption>
+</figure>
+
 A grid of students by assignments that takes marks straight from the keyboard.
 Standards and subjects as filters and colours, a report card for each student, and trends across the year.
 Benchmark tests, a behaviour record and a contact log for the classes that need them.
