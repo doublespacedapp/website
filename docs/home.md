@@ -38,3 +38,9 @@ Keeping a copy in your own Google Drive costs <!--price-->, once, and that is th
 
 Greatbook's [help page](./greatbook/help.html) covers what goes wrong most often.
 Anything it does not, and anything you would like the software to do, is worth saying: [support@doublespaced.app](mailto:support@doublespaced.app).
+
+## Paying for it
+
+Greatbook is free and stays free, and the one thing it charges for is Google Drive backup.
+
+If you would like to support the work beyond that, whether for Greatbook itself or for what Doublespaced builds next, [there is a page about it](./greatbook/donate.html).
