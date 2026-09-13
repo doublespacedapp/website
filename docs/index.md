@@ -1,4 +1,4 @@
-A gradebook for teachers of grades 3 through 10.
+A gradebook for teachers of any grade, from kindergarten through twelfth.
 It runs as a real program on Windows and macOS, and as an app you install from this page on a Chromebook.
 It works with no internet connection, and every score stays in a file that belongs to you.
 
