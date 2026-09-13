@@ -70,11 +70,40 @@ header {
   background: var(--raised);
 }
 
+/* The mark in the header, which is a drawing now rather than a word.
+ *
+ * --gb-accent is what the two-tone wordmark asks for, and pointing it at --link makes the
+ * blue half of "greatbook" the same blue as every link on the page and swap with the
+ * reader's theme along with them. The other half is currentColor, which is --ink.
+ *
+ * The height is set and the width left to follow: these drawings carry a viewBox and no
+ * dimensions, and given neither an SVG is drawn at the replaced-element default of 300. */
 .wordmark {
-  font-weight: 600;
-  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
   color: var(--ink);
   text-decoration: none;
+  --gb-accent: var(--link);
+}
+
+/* 1.7rem, because the lockup's floor is 140px wide and these proportions put that at
+ * 26px tall. At the 1.5rem that looked right it came out 128 and was under it. */
+.wordmark svg {
+  display: block;
+  height: 1.7rem;
+  width: auto;
+}
+
+/* Doublespaced is two words with a rule between them and no colour at all, and it needs
+ * the room. Its floor is 110px wide, which for this drawing's proportions is 4rem tall:
+ * the rule is two units of a 121-unit drawing, so anything shorter puts it under one
+ * device pixel on an ordinary screen and greys it out -- the studio's name as a smudge.
+ *
+ * That makes the company's header taller than the product's. It is one page with one mark
+ * on it, and the alternative was showing the mark at a size it was drawn not to be shown
+ * at. */
+.wordmark.studio svg {
+  height: 4rem;
 }
 
 header nav {
