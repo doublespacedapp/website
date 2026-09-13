@@ -116,6 +116,10 @@ const pages = [
     slug: 'index',
     title: PRODUCT,
     nav: 'Home',
+    // The one page here whose title is the name rather than a sentence about it, so the
+    // one page whose heading is the mark. Every other title -- "Installing Greatbook",
+    // "Using Greatbook" -- is a sentence, and a sentence cannot be set as a logo.
+    mark: true,
     description: `A gradebook for teachers of any grade, from kindergarten through twelfth. It works offline and keeps every score in a file you own.`,
   },
   {
@@ -287,6 +291,13 @@ function footerLinks() {
 // specification that measures them; site/brand/readme.md says so.
 const mark = async (name) => (await readFile(join(root, 'site', 'brand', name), 'utf8')).trim()
 
+// A mark standing in for a page's heading, labelled with which one it is.
+//
+// The two are shaped very differently -- the studio's is nearly square and the product's
+// is five times as wide as it is tall -- so one height cannot serve both. At the height
+// that suits the studio lockup the product's runs to 640px and swamps the page.
+const headingMark = (which, svg) => `<span class="heading-mark ${which}">${svg}</span>`
+
 const greatbookLockup = await mark('greatbook-lockup-twotone-themed.svg')
 // The full three-rule lockup, not the compact wordmark. Its middle rule is left empty and
 // that empty rule is the whole design: without it the mark shows two words set far apart
@@ -373,6 +384,7 @@ for (const page of pages) {
     join(productOut, `${page.slug}.html`),
     render({
       title: page.title,
+      ...(page.mark === true ? { heading: headingMark('product', greatbookLockup) } : {}),
       description: page.description,
       nav: navigation(page.slug),
       footer: footerLinks(),
@@ -407,7 +419,7 @@ await writeFile(
     title: UMBRELLA,
     // The company's own page says its name in its own hand. Everywhere else the heading is
     // the words, because everywhere else the heading is a sentence rather than a name.
-    heading: doublespacedLockup,
+    heading: headingMark('studio', doublespacedLockup),
     description: `${UMBRELLA} makes software for teachers. A teacher's work belongs to the teacher.`,
     // Empty. This navigation held exactly one link, to the product, and the product's own
     // lockup in the header beside the company's is now that link -- said once rather than
