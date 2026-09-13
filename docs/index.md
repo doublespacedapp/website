@@ -6,7 +6,7 @@ It works offline, keeps every score in a file you own, and never asks you to mak
 Hit Try a sample class on the first screen to poke around a full class without typing anything in.
 
 <figure class="shot">
-  <img src="./shots/grid.png" alt="The Grades tab: students down the side, assignments across the top, each column coloured by subject and labelled with the standard it assesses, and a class average along the bottom." width="3200" height="1800" loading="lazy">
+  <img src="./shots/grid.png" alt="The Grades tab: students down the side, assignments across the top, each column colored by subject and labeled with the standard it assesses, and a class average along the bottom." width="3200" height="1800" loading="lazy">
   <figcaption>The Grades tab. Report cards, trends and averages are all worked out from what you type here.</figcaption>
 </figure>
 
@@ -14,22 +14,25 @@ Hit Try a sample class on the first screen to poke around a full class without t
 
 - Mark from the keyboard, with arrow keys, missing, excused and late
 - Score out of points, as a percent, as a level, or done and not done
-- Extra credit, and assignments kept out of the grade
-- Comments on any single score, copy and paste, and undo
-- Standards on every assignment, more than one where a project covers more than one
-- Filter the grid to one standard, one subject, one category or one stretch of dates
-- Cells shaded by how well students did
-- Course grades by total points or weighted categories, dropping the lowest if you want
+- Course grades by total points or by weighted categories
 - Your own levels, letter cut-offs, late penalty and missing-work rule
 - Report cards with the course grade, every standard under it, and the grade you decide
-- A comment bank, so last term's wording is there when you need it again
-- As many report layouts as you like, each covering its own dates, laid out for printing
-- Trends for one student or the whole class, with the class average behind
-- Benchmarks, behaviour records and a contact log, switched on per class
+- Standards on every assignment, and more than one where a project covers more than one
+- Filter the grid to one standard, one subject, one category or one stretch of dates
 - Rosters pasted in whole, or brought over from a Google Classroom download
 - Common Core Math, Common Core English Language Arts and NGSS built in, plus CSV and CASE import
+- Trends for one student or the whole class, with the class average behind
+- Benchmarks, behavior records and a contact log, switched on per class
+- Cells shaded by how well students did, so a bad column shows before you read it
+- A comment bank, so last term's wording is there when you need it again
+- Drop the lowest few in a category, and flag work as extra credit or out of the grade
+- Copy and paste whole blocks of scores, comment on any one of them, and undo all of it
+- As many report layouts as you like, each covering its own dates, laid out for printing
 - Classes saved as templates, to reuse next year or hand to a colleague
-- Works offline, keeps every score in a file you own, and takes dated backups by itself
+- No account, and no server holding your class
+- Works with the Wi-Fi off
+- Every score in a file you own
+- Backups taken for you, dated, into a folder you pick
 
 Each of those is covered below.
 
@@ -76,7 +79,7 @@ Build as many reports as you like, each covering its own dates, and tick what go
 Make a short one for parents and a fuller one for an IEP meeting.
 
 They print properly, with ruled lines for a signature and a date.
-Finalise a card and its grades are frozen, so entering a late assignment next week will not change what you already sent home.
+Finalize a card and its grades are frozen, so entering a late assignment next week will not change what you already sent home.
 
 ## Trends
 
@@ -90,12 +93,12 @@ See whether scores are climbing or sliding over any stretch of the year, for one
 Draw a student against the class average, chart up to four standards at once, or look at how the class was spread across a single assignment.
 Every chart has a button that shows you the numbers behind it.
 
-## Benchmarks, behaviour and contacts
+## Benchmarks, behavior and contacts
 
 Three tabs you can turn on for a class in Setup, and leave off otherwise.
 
 **Benchmarks** hold the tests you run a few times a year — reading fluency, multiplication facts in two minutes.
-Set your own bands with a colour each, and a raw score turns into approaching or met on its own.
+Set your own bands with a color each, and a raw score turns into approaching or met on its own.
 They never touch the course grade.
 
 **Behaviors** is a grid of students against school days, so you can log what happened and have something concrete in front of you at a conference or a referral.
@@ -104,7 +107,7 @@ You pick the wording your school uses.
 **Contacts** logs calls and emails home, with a Last column that tells you who you have not spoken to since October.
 
 <figure class="shot">
-  <img src="./shots/behaviors.png" alt="The Behaviors tab: a grid of students against school days, with red marks for interfering behaviour and green for desired, and a running total for each student." width="3200" height="1800" loading="lazy">
+  <img src="./shots/behaviors.png" alt="The Behaviors tab: a grid of students against school days, with red marks for interfering behavior and green for desired, and a running total for each student." width="3200" height="1800" loading="lazy">
   <figcaption>Behaviors, a grid of students against school days.</figcaption>
 </figure>
 
@@ -113,10 +116,10 @@ You pick the wording your school uses.
 You set the rules, and the app shows each one applied to a real score while you are setting it, so you can check it before any grade depends on it.
 
 - Total points, or weighted categories
-- Dropping the lowest few scores in a category
 - What missing work counts as
 - What late work costs, as points or as a percentage
 - Your own levels and letter grade cut-offs
+- Dropping the lowest few scores in a category
 
 Or switch percentages off completely and mark everything in levels.
 

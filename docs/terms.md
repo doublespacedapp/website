@@ -15,7 +15,7 @@ There are no plans to move features that are free today behind the key.
 ## The premium version
 
 Google Drive backup is the one paid feature.
-It is a single payment for a licence that does not expire. There is no subscription.
+It is a single payment for a license that does not expire. There is no subscription.
 
 The payment is taken by Polar, who are the merchant of record for the sale.
 Polar's terms govern the payment itself; these terms govern your use of the software.

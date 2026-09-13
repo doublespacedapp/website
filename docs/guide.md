@@ -14,7 +14,7 @@ This is where you describe a class, once, and each part of it has its own panel.
 
 - **Class** is the name, the grade level, and the grading periods the year is divided into. Periods are date ranges and may not overlap. Benchmarks, Behaviors and Contacts are switched on or off for the class here.
 - **Students** is your roster, and you can paste a whole list at once.
-- **Subjects** are the areas you teach, each with a colour and a symbol you choose.
+- **Subjects** are the areas you teach, each with a color and a symbol you choose.
 - **Standards** are what you are assessing, each belonging to a subject.
 - **Categories** are the kinds of work you assign — homework, quizzes, projects.
 - **Grading** is what each category is worth, and how levels turn into a course grade.
@@ -102,13 +102,13 @@ Standards mode turns percentages and letter grades off entirely and marks in lev
 Tests you give a few times a year to see where students are.
 
 <figure class="shot">
-  <img src="./shots/benchmarks.png" alt="The Benchmarks tab: a grid of students against testing sessions, each result coloured by the band it falls into." width="3200" height="1800" loading="lazy">
-  <figcaption>Each result coloured by the band it falls in.</figcaption>
+  <img src="./shots/benchmarks.png" alt="The Benchmarks tab: a grid of students against testing sessions, each result colored by the band it falls into." width="3200" height="1800" loading="lazy">
+  <figcaption>Each result colored by the band it falls in.</figcaption>
 </figure>
 
 A benchmark is what you measure — oral reading fluency, multiplication facts in two minutes — and a session is one sitting of it.
 
-Set the bands yourself, with a colour each, so a raw score reads as approaching or met.
+Set the bands yourself, with a color each, so a raw score reads as approaching or met.
 Benchmarks stay out of the course grade.
 
 ## Behaviors
@@ -116,12 +116,12 @@ Benchmarks stay out of the course grade.
 This keeps a record of what happened and when, which is what you need at a conference or for a referral.
 
 <figure class="shot">
-  <img src="./shots/behaviors.png" alt="The Behaviors tab: a grid of students against school days, with red marks for interfering behaviour and green for desired, and a running total for each student." width="3200" height="1800" loading="lazy">
+  <img src="./shots/behaviors.png" alt="The Behaviors tab: a grid of students against school days, with red marks for interfering behavior and green for desired, and a running total for each student." width="3200" height="1800" loading="lazy">
   <figcaption>Students against school days.</figcaption>
 </figure>
 
 Each record is a student, a day, what happened, and if you want it, what came before and what followed.
-Setup has a panel for naming the behaviours your school uses.
+Setup has a panel for naming the behaviors your school uses.
 
 ## Contacts
 
@@ -141,7 +141,7 @@ Name the methods yourself in Setup — a phone call, an email, a note sent home.
   <figcaption>One student against three standards, with the class average behind.</figcaption>
 </figure>
 
-You can draw trends from grades, from benchmarks or from behaviour records.
+You can draw trends from grades, from benchmarks or from behavior records.
 
 Pick a student and you get their line over time, up to four standards at once, with the class average drawn behind if you want the comparison.
 Pick the class and you get the same chart, averaged.
@@ -167,7 +167,7 @@ Make a short one for parents and a fuller one for an IEP meeting.
 Open up the category breakdown and you can see each weight, which scores were dropped, and the arithmetic behind the percent.
 
 One button prints them, laid out for paper, with ruled lines for a signature and a date.
-Finalise a card and its grades are frozen, so entering a late assignment next week will not change what you already sent home.
+Finalize a card and its grades are frozen, so entering a late assignment next week will not change what you already sent home.
 You can reopen it whenever you want.
 
 ## Trying it first

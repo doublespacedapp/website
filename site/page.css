@@ -2,7 +2,7 @@
  *
  * The look is deliberately plain. This is a tool a teacher opens on a Tuesday to find
  * out how to restore a backup, not a product page, so it reads like a page of writing
- * with a navigation bar above it. The colours follow whatever the reader's computer is
+ * with a navigation bar above it. The colors follow whatever the reader's computer is
  * set to rather than insisting on a light page at night. */
 
 :root {
@@ -196,14 +196,14 @@ caption {
 
 /* Screenshots.
  *
- * The app is a light-coloured grid and this page follows whatever the reader's computer is
+ * The app is a light-colored grid and this page follows whatever the reader's computer is
  * set to, so at night a screenshot is a bright rectangle on a dark page. The matte and the
  * hairline around it are what stop that reading as a hole in the page, and they cost one
  * set of images to keep in step rather than two.
  *
  * A shot is wider than the prose on purpose. The measure is 38rem because that is a
  * comfortable line of text, and a picture of a spreadsheet squeezed into it shows nothing.
- * These are allowed out to 52rem, centred on the column, and fall back to the width of the
+ * These are allowed out to 52rem, centered on the column, and fall back to the width of the
  * column when the window is narrower than that. */
 img {
   max-width: 100%;

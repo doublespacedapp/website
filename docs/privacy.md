@@ -29,7 +29,7 @@ The developer has no access to any of them and no way to obtain them.
 
 Google Drive backup is optional and off unless you switch it on.
 It is the only feature that sends any of your work off the device.
-Apart from it, the app makes only two kinds of network request: a licence check and a check for a new version.
+Apart from it, the app makes only two kinds of network request: a license check and a check for a new version.
 
 When you switch it on, you sign in through Google's own window and grant permission using the `drive.file` scope.
 That scope limits the app to files it created itself, plus any file you explicitly choose with Google's file picker.
@@ -85,7 +85,7 @@ Because the information stays in your possession, the developer is never a recip
 Whether any of this affects your obligations is a question for your school or district rather than one this page can answer. If you turn on Drive backup with a school Google account, that copy sits in your school's own Google Workspace, under whatever agreement your district already has with Google.
 
 If your district requires a data processing agreement or a vendor privacy review before software may hold student information, please raise this page with them.
-The short version to give them is that no student data leaves the teacher's device except, optionally, into the teacher's own Google Drive, and that the only other traffic the app makes is a licence check and a version check, neither of which carries anything about a student.
+The short version to give them is that no student data leaves the teacher's device except, optionally, into the teacher's own Google Drive, and that the only other traffic the app makes is a license check and a version check, neither of which carries anything about a student.
 
 The version check asks GitHub, where the app is published, whether there is a newer release. GitHub sees that request the way it sees any download, including the IP address it came from, as described in the [GitHub Privacy Statement](https://docs.github.com/site-policy/privacy-policies/github-privacy-statement). It carries nothing about you and nothing about your gradebook. Settings has a switch to stop the app checking at all.
 
