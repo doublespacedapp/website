@@ -267,14 +267,38 @@ function footerLinks() {
 // On a product page the wordmark is the product and leads to its own home; the company is
 // named in the footer, one level up. On the company's page there is no app to open, so the
 // button that would say so is left out rather than pointed at nothing.
+// The marks are put into the page rather than linked from it.
+//
+// An <img> would be the obvious way and it is the wrong one. An SVG loaded through <img>
+// is an isolated document: currentColor and the custom properties on this page never
+// reach inside it, and nothing reports it. The two-tone wordmark would keep the light
+// mode's blue and paint "book" in near-black, which against the dark page these colours
+// switch to at night is a name nobody can read. Inlined, it follows --link like
+// everything else here.
+//
+// site/brand holds copies. The originals live in the application repository beside the
+// specification that measures them; site/brand/readme.md says so.
+const mark = async (name) => (await readFile(join(root, 'site', 'brand', name), 'utf8')).trim()
+
+const greatbookLockup = await mark('greatbook-lockup-twotone-themed.svg')
+const doublespacedWordmark = await mark('doublespaced-wordmark.svg')
+
+// The link carries the name for a reader who cannot see the drawing. The SVG has a <title>
+// of its own, but a link whose only content is an image is announced by its own accessible
+// name, and without this it would have none.
 const productChrome = {
-  wordmark: `<a class="wordmark" href="./">${PRODUCT}</a>`,
+  siteName: PRODUCT,
+  wordmark: `<a class="wordmark" href="./" aria-label="${PRODUCT}">${greatbookLockup}</a>`,
   actions: `<a class="open-app" href="./app/">Open the web app</a>`,
   colophon: `${PRODUCT} is made by <a href="../">${UMBRELLA}</a>. Copyright {{year}}.`,
 }
 
+// The compact wordmark, not the three-rule lockup. The lockup's empty middle rule is the
+// whole joke and it needs 160px and a great deal of height to tell it; this says the same
+// thing with the rule drawn between the two words, at the height of a navigation bar.
 const umbrellaChrome = {
-  wordmark: `<a class="wordmark" href="./">${UMBRELLA}</a>`,
+  siteName: UMBRELLA,
+  wordmark: `<a class="wordmark studio" href="./" aria-label="${UMBRELLA}">${doublespacedWordmark}</a>`,
   actions: '',
   colophon: `${UMBRELLA} is Justin Delano. Copyright {{year}}.`,
 }
@@ -286,6 +310,10 @@ function render({ title, description, nav, footer, content, chrome }) {
   let page = fill(template, '{{wordmark}}', chrome.wordmark)
   page = fill(page, '{{actions}}', chrome.actions)
   page = fill(page, '{{colophon}}', chrome.colophon)
+  // Which of the two this page belongs to, which is what a chat window prints above the
+  // title when someone pastes the link. Without it every page unfurls as though it came
+  // from nowhere in particular.
+  page = fill(page, '{{siteName}}', chrome.siteName)
   page = fill(page, '{{title}}', title)
   page = fill(page, '{{description}}', escapeAttribute(description))
   // Absolute, and the only absolute link on the site. Everything a reader clicks is
@@ -367,6 +395,26 @@ for (const entry of passthrough) {
   await copyFile(join(root, 'site', entry.name), join(productOut, entry.name))
 }
 
+// The favicons, one per identity, written rather than passed through.
+//
+// The passthrough above copies every loose file in site/ to both roots, which is exactly
+// what a single icon.svg must not do: the company and the product are not the same thing
+// and cannot wear the same face. That is what the site did until now -- the product's
+// gradebook glyph was the company's mark too, at a root whose entire purpose is to say
+// the company is bigger than the one product under it.
+//
+// The company's is black and white and the product's is blue. site/brand is a directory,
+// so the loop above cannot see it and these are the only copies that reach the output.
+await copyFile(join(root, 'site', 'brand', 'doublespaced-icon.svg'), join(out, 'icon.svg'))
+await copyFile(
+  join(root, 'site', 'brand', 'doublespaced-icon-dark.svg'),
+  join(out, 'icon-dark.svg'),
+)
+await copyFile(join(root, 'site', 'brand', 'greatbook-icon.svg'), join(productOut, 'icon.svg'))
+// The product's tile is a white mark on its own blue and needs no second version; the
+// dark name is still written so that the one link in the template resolves at both roots.
+await copyFile(join(root, 'site', 'brand', 'greatbook-icon.svg'), join(productOut, 'icon-dark.svg'))
+
 // The screenshots, which are the one thing here that is not copied twice.
 //
 // They are pictures of Greatbook, only Greatbook's pages ask for them, and they are nearly
@@ -425,6 +473,10 @@ await writeFile(
       colophon: productChrome.colophon.replace('href="../"', 'href="../../"'),
     },
   })
+    // Every href in the head, one at a time. This page is a level deeper than any other
+    // and nothing checks these: a head asset added to the template without a line here
+    // resolves on every page but this one, and 404s with no error anywhere.
     .replaceAll('href="./page.css"', 'href="../page.css"')
-    .replaceAll('href="./icon.svg"', 'href="../icon.svg"'),
+    .replaceAll('href="./icon.svg"', 'href="../icon.svg"')
+    .replaceAll('href="./icon-dark.svg"', 'href="../icon-dark.svg"'),
 )
