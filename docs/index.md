@@ -7,7 +7,7 @@ Hit Try a sample class on the first screen to poke around a full class without t
 
 <figure class="shot">
   <img src="./shots/grid.png" alt="The Grades tab: students down the side, assignments across the top, each column coloured by subject and labelled with the standard it assesses, and a class average along the bottom." width="3200" height="1800" loading="lazy">
-  <figcaption>Grades. Every other tab reads from this one.</figcaption>
+  <figcaption>The Grades tab. Report cards, trends and averages are all worked out from what you type here.</figcaption>
 </figure>
 
 ## Marking
@@ -21,7 +21,7 @@ A whole stack of papers goes in about as fast as you can read them.
 Score things out of points, as a percent, as a level, or just done and not done.
 Flag an assignment as extra credit, or keep it out of the grade entirely.
 
-You can comment on any single score, copy and paste whole blocks of them, and undo the lot.
+You can comment on any single score, copy and paste whole blocks of scores, and undo anything you have just done.
 
 ## Standards
 
@@ -30,7 +30,7 @@ One project can carry three of them.
 
 Filter the grid down to a single standard and you can see how all 24 students are doing on that one thing.
 
-Cells are shaded by how well students did, so a column that went badly jumps out before you have read a single number.
+Cells are shaded by how well students did, so a column that went badly jumps out before you read a number.
 
 ## Report cards
 
@@ -40,7 +40,7 @@ Cells are shaded by how well students did, so a column that went badly jumps out
 </figure>
 
 Every student gets a page showing the course grade their assignments add up to, and underneath it, how they are doing on each standard.
-You get both pictures at once.
+So you can see a B-minus and, right under it, that the B-minus is two strong standards and one they have not got yet.
 
 Then you type in the grade you are actually giving, which the app never calculates for you, plus a comment.
 Comments you write every term can be saved and dropped in again.
@@ -65,7 +65,7 @@ Every chart has a button that shows you the numbers behind it.
 
 ## Benchmarks, behaviour and contacts
 
-Three extra tabs you can switch on per class, and ignore for the classes that do not need them.
+Three tabs you can turn on for a class in Setup, and leave off otherwise.
 
 **Benchmarks** hold the tests you run a few times a year — reading fluency, multiplication facts in two minutes.
 Set your own bands with a colour each, and a raw score turns into approaching or met on its own.
@@ -83,7 +83,7 @@ You pick the wording your school uses.
 
 ## Grades worked out your way
 
-Total points or weighted categories, dropping the lowest scores if that is how you work.
+Total points or weighted categories, and you can drop the lowest few scores in a category if you want to.
 
 Decide what missing work counts as and what late work costs.
 The app shows you the rule applied to a real number while you are setting it, so you can check it before any grade depends on it.
@@ -95,7 +95,7 @@ Or switch percentages off completely and mark everything in levels.
 
 Paste your whole roster in at once.
 
-Already grading in Google Classroom? Its grades download brings your students, your assignments and your marks across in one go.
+If you are already grading in Google Classroom, the grades file it downloads brings the students, the assignments and the marks over in one go.
 You see exactly what it will do first, and you decide which version wins when a mark clashes with one of yours.
 It never deletes anything.
 
@@ -105,10 +105,11 @@ Save a class as a template to carry a course into next year, or to hand to the t
 
 ## Your work stays yours
 
-No account, no server, no sign-in.
-Nothing about your students goes anywhere.
+You do not make an account, and there is no server anywhere holding your gradebook.
+Your students' names and scores sit on your own computer and stay there.
 
-There is no save button — every edit is written down the moment you make it, and dated backups go to a folder you choose.
+There is no save button, because every edit is written to the file the moment you make it.
+Dated backups go to a folder you pick.
 
 It runs as a proper app on Windows and macOS, and installs straight from this page on a Chromebook.
 
@@ -116,7 +117,7 @@ It runs as a proper app on Windows and macOS, and installs straight from this pa
 
 Greatbook is free, and everything above is in the free version.
 
-The one thing you pay for is keeping a copy of your gradebook in your own Google Drive, so you can pick it up on another computer.
+You pay only for one thing: keeping a copy of your gradebook in your own Google Drive, so you can pick it up on another computer.
 That is <!--price--> once, with no subscription.
 [Here is what it can and cannot see.](./drive.html)
 
@@ -124,5 +125,5 @@ That is <!--price--> once, with no subscription.
 
 [Install it](./install.html), then skim [the guide](./guide.html).
 
-[Where your work is kept](./data.html) is the one to read in September, because it covers backups.
+[Where your work is kept](./data.html) covers backups, and is worth reading before you have a term's marking to lose.
 If something has gone wrong, [try here](./help.html).

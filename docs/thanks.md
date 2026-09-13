@@ -8,18 +8,18 @@ It usually arrives within a minute.
 Open Greatbook, then Settings, and find **The premium version**.
 
 Sign in with Google.
-Your key is tied to your Google account, which is what keeps it yours and is what lets Drive backup work at all.
+Your key is tied to your Google account, so it stays yours, and Drive backup signs in with that account anyway.
 
 Paste your key and choose **Unlock**.
 
 Google Drive appears in Settings under Sync, and your gradebook starts copying itself into your Drive.
-Sign in on another computer and it is there.
+Sign in with the same Google account on another computer and your gradebook syncs down to it.
 
 [Where your work is kept](./data.html) explains how the copies keep level with each other, and [the Google Drive page](./drive.html) says exactly what Greatbook can and cannot see in your Drive.
 
 ## Your key covers five computers
 
-A classroom desktop, a laptop at home, and room for a reimage or two.
+That is enough for a classroom desktop, a laptop at home, and a spare slot if a machine gets reimaged.
 
 If you change computer, open Settings on the old one and choose **Remove this key from this computer**.
 That frees the slot for the new one.
@@ -33,6 +33,6 @@ Polar's receipt also has a link to your own purchase page, where the key can be 
 
 ## One payment
 
-There is no subscription and no renewal, and you will not be charged again.
+You will not be charged again. There is no subscription and no renewal.
 
-Anything added to the premium version later is included for you, because the key does not expire.
+Anything added to the premium version later is included, at no further charge.

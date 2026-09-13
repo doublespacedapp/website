@@ -1,21 +1,20 @@
 Effective 12 September 2026.
 
 Greatbook is published under the name Doublespaced by Justin Delano, an individual developer.
-Doublespaced is a trading name rather than a company: there is no incorporated entity behind it, and it is not a school or a district. It operates no servers.
-
-This policy is short because there is very little to describe.
+Doublespaced is a trading name rather than an incorporated company, and it operates no servers of its own.
 
 ## The short version
 
 Greatbook collects nothing about your students, and nothing about you unless you buy something.
 
-There is no account, no sign-up, no analytics, no advertising, no tracking, and no third-party scripts on the pages of this app.
+In the app there is no account and no sign-up.
+It runs no analytics or tracking, carries no advertising, and loads no third-party scripts.
 Your gradebook is stored on your own computer.
-Nothing about it reaches the developer, at any point, in any form.
+Nothing about it reaches the developer in any form.
 
 Buying the premium version means a shop is involved, and it learns your email address and how you paid.
 That is set out under "Paying for the premium version" below.
-It is the one place where anything about you reaches anyone, and even there it is an order, never anything about a student.
+That is the only case where information about you reaches anyone else, and what reaches them is an order, not anything about a student.
 
 ## What Greatbook stores, and where
 
@@ -23,29 +22,28 @@ Everything you enter, meaning your classes, students, assignments, standards, sc
 
 Depending on the device and what you have switched on, that means the app's own storage on that device, a file in a folder you chose, dated backup files in a folder you chose, and, if you turn it on, a file in your own Google Drive.
 
-All of those belong to you.
-They are on your hardware or in your own accounts.
+All of those live on your hardware or in your own accounts, so they are yours.
 The developer has no access to any of them and no way to obtain them.
 
 ## Google Drive backup
 
 Google Drive backup is optional and off unless you switch it on.
-It is the only feature that sends any of your work anywhere, and the only network the app uses besides checking a key and looking for a new version.
+It is the only feature that sends any of your work off the device.
+Apart from it, the app makes only two kinds of network request: a licence check and a check for a new version.
 
 When you switch it on, you sign in through Google's own window and grant permission using the `drive.file` scope.
 That scope limits the app to files it created itself, plus any file you explicitly choose with Google's file picker.
 It cannot list your Drive or read your other files.
 
-What is stored in your Drive is your gradebook file.
-It goes from your device to your Google Drive directly.
-It does not pass through any server operated by the developer, because none exists.
+Greatbook writes your gradebook file into your Drive, directly from your device.
+It does not pass through any server operated by the developer.
 
 The app keeps a Google access token on your device so that it can continue writing without asking you again.
 That token stays on the device and is discarded when you turn Drive backup off.
 
 Greatbook's use of information received from Google APIs adheres to the [Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy), including the Limited Use requirements.
 
-In plain terms: the Google data the app touches is used only to provide the backup feature you asked for.
+The Google data the app touches is used only to provide the backup feature you asked for.
 It is never transferred to anyone, never used for advertising, never sold, and never read by a human.
 
 You can withdraw the permission at any time, from Settings inside the app or from [your Google account](https://myaccount.google.com/permissions).
@@ -53,11 +51,11 @@ You can withdraw the permission at any time, from Settings inside the app or fro
 ## Paying for the premium version
 
 The premium version is sold through Polar, who are the merchant of record.
-That means the sale is theirs: they take the payment, they handle the tax, and they hold whatever a shop has to hold about a customer.
+That means the sale is theirs: Polar takes the payment, handles the tax, and holds the customer records for it under their own privacy policy.
 
 Polar receives your email address and your payment details, under [their own privacy policy](https://polar.sh/legal/privacy).
 The developer never sees a card number.
-What the developer can see, in Polar's dashboard, is an order: an email address, the country it was taxed in, and which key belongs to it.
+In Polar's dashboard, the developer can see the order: an email address, the country it was taxed in, and which key belongs to it.
 
 Nothing about your students is part of that, and no gradebook data of any kind passes through the shop.
 
@@ -70,9 +68,8 @@ Afterwards, the occasional check sends the key, the identifier of this activatio
 The email address is not sent again.
 
 None of these requests carry your gradebook, your students, your scores or their grades.
-There is nothing about a student anywhere in the licence machinery.
 
-Each request goes from your computer straight to Polar, because there is still no server of ours in the middle.
+Each request goes from your computer to Polar directly.
 
 Releasing a device, with "Remove this key from this computer", sends the key and that activation and nothing else.
 
@@ -85,17 +82,17 @@ Responsibility for the student information you enter rests with you and your sch
 Because the data stays in your possession, using Greatbook does not create a disclosure of student records to a third party.
 
 If your district requires a data processing agreement or a vendor privacy review before software may hold student information, please raise this page with them.
-The honest summary to give them is that no student data leaves the teacher's device except, optionally, into the teacher's own Google Drive, and that the only other traffic the app makes is a licence check and a version check, neither of which carries anything about a student.
+The short version to give them is that no student data leaves the teacher's device except, optionally, into the teacher's own Google Drive, and that the only other traffic the app makes is a licence check and a version check, neither of which carries anything about a student.
 
-Greatbook is not directed at children and children do not use it.
-It is used by teachers, about students.
+Greatbook is not directed at children, and it is not intended for students to use.
+It is a tool for teachers, who enter information about their students.
 
 ## This website
 
 The pages on this site are served by GitHub Pages.
 GitHub logs requests to the servers it runs, as any web host does, and that is described in the [GitHub Privacy Statement](https://docs.github.com/site-policy/privacy-policies/github-privacy-statement).
 
-This site sets no cookies, includes no analytics, and embeds nothing from anyone else.
+This site sets no cookies, runs no analytics, and embeds no third-party content.
 
 Downloading an installer downloads a file from GitHub Releases, which GitHub logs in the same way.
 

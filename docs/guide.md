@@ -5,7 +5,7 @@ Every tab has a question mark that explains that tab, and Settings has the whole
 
 ## Setup
 
-Where you describe a class once, with a panel for each part.
+This is where you describe a class, once, and each part of it has its own panel.
 
 <figure class="shot">
   <img src="./shots/setup.png" alt="The Setup tab, with a rail down the left listing Class, Students, Subjects, Grading, Categories, Standards, Behaviors and Contacts, and the Class panel open beside it showing grading periods with start and end dates." width="3200" height="1800" loading="lazy">
@@ -26,7 +26,7 @@ Benchmarks, Behaviors and Contacts are switched on or off for the class here.
 
 **Grading** is what each category is worth, and how levels turn into a course grade.
 
-Nothing here is fixed once the year starts.
+You can change any of this later; nothing here is locked once the year is under way.
 
 ### Bringing a class in
 
@@ -78,7 +78,7 @@ Blocks of scores copy and paste, and undo covers it in one step.
 
 Subjects, standards, categories and dates filter the grid.
 Narrow to one standard and you are looking at the whole class on that one thing.
-Colour follows performance, so where a class is struggling is visible before you read a number.
+Cells are shaded by how well students did, so a column where the class came unstuck is obvious at a glance.
 
 There is a list layout beside the grid for working on one assignment at a time.
 
@@ -92,10 +92,10 @@ One assignment can cover several standards at once, so a single project can feed
 
 <figure class="shot">
   <img src="./shots/grading.png" alt="The Grading panel, showing a choice between total points and weighted categories, what missing work counts as, a late penalty with a worked example, rounding, and editable scales for levels and for letter grades." width="3200" height="1800" loading="lazy">
-  <figcaption>The rules are yours, and are shown working.</figcaption>
+  <figcaption>The grading rules, with the late penalty worked through on a real score.</figcaption>
 </figure>
 
-Total points or weighted categories, with low scores dropped if you drop them.
+Total points or weighted categories, and you can drop the lowest few scores in a category if you want to.
 
 Missing work counts as zero or does not count.
 Late work can cost points, a percentage, or nothing.
@@ -120,7 +120,7 @@ Benchmarks stay out of the course grade.
 
 ## Behaviors
 
-A record of what happened and when, for conferences and referrals.
+This keeps a record of what happened and when, which is what you need at a conference or for a referral.
 
 <figure class="shot">
   <img src="./shots/behaviors.png" alt="The Behaviors tab: a grid of students against school days, with red marks for interfering behaviour and green for desired, and a running total for each student." width="3200" height="1800" loading="lazy">
@@ -128,7 +128,7 @@ A record of what happened and when, for conferences and referrals.
 </figure>
 
 Each record is a student, a day, what happened, and if you want it, what came before and what followed.
-Setup has a panel for naming the behaviours your school actually uses.
+Setup has a panel for naming the behaviours your school uses.
 
 ## Contacts
 
@@ -148,10 +148,10 @@ Name the methods yourself in Setup — a phone call, an email, a note sent home.
   <figcaption>One student against three standards, with the class average behind.</figcaption>
 </figure>
 
-Drawn from grades, benchmarks or behaviours, whichever you choose.
+You can draw trends from grades, from benchmarks or from behaviour records.
 
-For one student, whether they are climbing or sliding, up to four standards at once, with the class average behind them if you want it.
-For the class, the same as an average.
+Pick a student and you get their line over time, up to four standards at once, with the class average drawn behind if you want the comparison.
+Pick the class and you get the same chart, averaged.
 
 Underneath, a histogram shows how the class was spread across a single assignment.
 Every chart has the numbers under a Show table button.
@@ -164,7 +164,6 @@ Every chart has the numbers under a Show table button.
 </figure>
 
 Every student gets a page with the course grade their assignments add up to, and under it how they are doing on each standard.
-You get both pictures at once.
 
 Then you type in the grade you are actually giving, which the app never calculates for you, plus a comment.
 Comments you write every term can be saved and dropped in again.
@@ -174,7 +173,7 @@ Make a short one for parents and a fuller one for an IEP meeting.
 
 Open up the category breakdown and you can see each weight, which scores were dropped, and the arithmetic behind the percent.
 
-Printing is one button, laid out for paper with ruled lines for a signature and a date.
+One button prints them, laid out for paper, with ruled lines for a signature and a date.
 Finalise a card and its grades are frozen, so entering a late assignment next week will not change what you already sent home.
 You can reopen it whenever you want.
 
@@ -182,5 +181,5 @@ You can reopen it whenever you want.
 
 Choose Try a sample class on the first screen.
 
-It fills the app with invented students and invented work, so every screen has something in it.
-Nothing is saved, and it never becomes your gradebook.
+It fills the app with invented students and their work, so every screen has something in it.
+When you close it, the sample class goes away, and it is never mixed in with a real class of yours.

@@ -44,7 +44,7 @@ Opening the app somewhere else gives you an empty one.
 
 If you have a backup file, Settings, then Restore from a file, brings it back.
 
-This is what [Google Drive backup](./drive.html) is for.
+To have the same gradebook on more than one computer, see [Google Drive backup](./drive.html).
 
 ## I made a mess of a column
 
@@ -54,11 +54,13 @@ If the mess is older than that, Settings lists dated backups under Backups, and 
 
 ## Google Drive is not offered in Settings
 
-Drive backup is [the premium version](./drive.html), so if you have not bought it, that is why.
+Drive backup comes with [the premium version](./drive.html).
+If you have not bought it, it will not appear in Settings.
 
-If you have bought it and it is still missing, your school has probably turned off outside apps for school Google accounts, which plenty of districts do.
-Greatbook spots that and hides Drive, so you do not sign in and hit a wall.
-Your school's IT people can tell you either way.
+If you have bought it and it is still missing, your school has most likely turned off outside apps for school Google accounts.
+Many districts do.
+Greatbook detects that and hides Drive rather than letting you sign in to something that will not work.
+Your school's IT people can confirm it either way.
 
 ## I bought the premium version and my key has not arrived
 
@@ -78,13 +80,13 @@ If that computer is gone for good, write to [support@doublespaced.app](mailto:su
 ## Drive backup has stopped and the app is asking me to reconnect
 
 The key is checked with the shop now and then, and that check needs the internet.
-After a fortnight with no connection, Drive backup pauses until the app can ask again.
+After a long stretch with no connection, Drive backup pauses until the app can ask again.
 
-Nothing has been lost and nothing has to be bought again.
-Open the app once with a connection and it carries on.
-Every other part of Greatbook works throughout.
+Open the app once with a connection and Drive backup starts again.
+Nothing has been lost, and you do not have to buy anything a second time.
+The rest of Greatbook keeps working while it is paused.
 
 ## I want to start the year again
 
 Settings, then Start over, erases the gradebook on this computer.
-Take a backup first, because that is the only way back, and the app will say so.
+Take a backup first. It is the only way back to what you have now, and the app will remind you before it erases anything.

@@ -1,4 +1,4 @@
-One application, built three ways.
+Greatbook is one application, installed differently depending on the computer.
 Windows and macOS get an installer you double-click.
 A Chromebook cannot run a program like that, so there Greatbook installs from the web and ends up with its own icon and its own window just the same.
 
@@ -9,7 +9,7 @@ A Chromebook cannot run a program like that, so there Greatbook installs from th
 ### The warning you will see the first time
 
 Neither installer is signed yet, so both systems will stop you once.
-The apps are no different from any other; the computer simply has no way to know who made them.
+Nothing is wrong with the apps. The computer has no way to check who made them, so it warns you.
 
 On Windows, SmartScreen says "Windows protected your PC".
 Choose More info, then Run anyway.
@@ -38,7 +38,7 @@ It writes your gradebook straight into your Documents folder with nothing to set
 On a Chromebook, install it from the web.
 
 In Firefox or Safari, take the installer.
-Those browsers cannot hand a web app a file to write to, which for a gradebook is the whole job, so the web app asks for Chrome or Edge.
+Firefox and Safari cannot give a web app permission to write to a file on your computer, so the web app has nowhere to keep your gradebook. It will ask you for Chrome or Edge.
 
 On someone else's computer, or for a look, open the web app and choose Try a sample class.
 Nothing is saved anywhere you would have to clean up.
@@ -48,7 +48,7 @@ Nothing is saved anywhere you would have to clean up.
 The web app updates itself the next time you open it with a connection.
 
 The Windows and macOS apps check for new versions and offer them.
-Nothing installs on its own, so an update cannot arrive in the middle of a marking session.
+Nothing installs until you choose it, so an update will not start while you are working.
 Settings, then About, has the version you are on, a button to check now, and a switch to stop checking.
 
 Your gradebook is a separate file and is not touched by an update.

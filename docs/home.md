@@ -1,7 +1,7 @@
 Doublespaced makes software for teachers.
 
-The idea behind all of it is the same one: a teacher's work belongs to the teacher.
-Nothing here asks for an account, keeps your data on someone else's computer, or stops working when the Wi-Fi does.
+Everything here is built on the same idea, which is that a teacher's records are the teacher's.
+There is no account to make, nothing of yours is kept on our computers, and it all works the same with the Wi-Fi off.
 
 ## Greatbook
 
@@ -11,12 +11,12 @@ A gradebook for teachers of any grade, from kindergarten through twelfth.
 
 <figure class="shot">
   <img src="./greatbook/shots/grid.png" alt="The Grades tab: students down the side, assignments across the top, each column coloured by subject and labelled with the standard it assesses, and a class average along the bottom." width="3200" height="1800" loading="lazy">
-  <figcaption>Grades. Every other tab reads from this one.</figcaption>
+  <figcaption>The Grades tab. Report cards, trends and averages are all worked out from what you type here.</figcaption>
 </figure>
 
-A grid of students by assignments that takes marks straight from the keyboard.
-Standards and subjects as filters and colours, a report card for each student, and trends across the year.
-Benchmark tests, a behaviour record and a contact log for the classes that need them.
+Students run down the side and assignments across the top, and you fill it in from the keyboard without reaching for the mouse.
+Colour the columns by subject, filter the grid to one standard, print a report card for each student, and chart how the year has gone.
+If a class needs them, you can also switch on benchmark tests, a behaviour record and a log of calls home.
 
 A year can start without typing a roster or a standard: Google Classroom's grades download brings a class in whole, and Common Core and the Next Generation Science Standards are built in.
 
@@ -24,7 +24,7 @@ It runs on Windows and macOS and installs from the web on a Chromebook.
 It works offline and keeps every score in a file you own.
 
 Greatbook is free.
-The one part that costs anything is keeping a copy in your own Google Drive, at <!--price--> once.
+Keeping a copy in your own Google Drive costs <!--price-->, once, and that is the only thing you ever pay for.
 
 [Read about Greatbook](./greatbook/), or [install it](./greatbook/install.html).
 

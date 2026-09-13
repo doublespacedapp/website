@@ -3,7 +3,6 @@ Effective 12 September 2026.
 Greatbook is published under the name Doublespaced by Justin Delano, an individual developer.
 Doublespaced is a trading name rather than an incorporated company, so "the developer" below means that person.
 Using the app means accepting what is written here.
-It is written to be read, not to be impressive.
 
 ## What you may do with it
 
@@ -16,17 +15,17 @@ The free features are free and are intended to stay that way.
 ## The premium version
 
 Google Drive backup is the one paid feature.
-It is a single payment for a licence that does not expire, with no subscription and no renewal.
+It is a single payment for a licence that does not expire. There is no subscription.
 
 The payment is taken by Polar, who are the merchant of record for the sale.
-Their terms cover the transaction; these terms cover the software.
+Polar's terms govern the payment itself; these terms govern your use of the software.
 
 You receive a key by email.
 A key may be activated on up to five devices, and a device can be released again from Settings to free the slot.
 The key is tied to the Google account you sign in with, and is for your own use rather than for sharing or resale.
 
 The app checks the key occasionally, which needs an internet connection now and then.
-If it cannot reach the shop it carries on for a fortnight before Drive backup pauses; nothing has to be bought again, and no other part of the app is affected.
+If it cannot reach the shop for a long stretch, Drive backup pauses until it can check again. Nothing has to be bought again, and no other part of the app is affected.
 
 A key may be revoked if it was obtained fraudulently or if the payment for it is reversed.
 
@@ -54,9 +53,9 @@ Do not use it to break the law, or to break the rules your school or district ha
 Greatbook stores your work on your own devices and in places you choose.
 Nothing is stored for you anywhere else, and no copy exists that the developer could recover on your behalf.
 
-That means backups matter, and they matter more than they would with a service that keeps a copy for you.
+So keeping your own backups matters here more than it would with a service that stores a copy for you.
 The app takes dated backups for you and asks you where to put them, and [the page about your data](./data.html) explains how.
-If you lose the device and have no backup, the gradebook is gone, and there is nothing anybody can do about it.
+If you lose the device and have no backup, the gradebook is gone, and the developer has no copy to restore from.
 
 You are also responsible for the student information you enter, and for meeting whatever obligations your school, district, or jurisdiction places on you for handling it.
 
@@ -71,7 +70,7 @@ Grades that must be reported officially should be entered wherever your school r
 Greatbook is provided as it is, with no warranty of any kind, express or implied.
 
 It is not promised to be free of defects, to be available, to be fit for any particular purpose, or to calculate any grade correctly.
-Check anything that matters before you act on it, as you would with any tool.
+Check anything that matters before you act on it.
 
 ## Limitation of liability
 
@@ -88,7 +87,7 @@ Nothing here limits liability that the law does not allow to be limited.
 The Windows and macOS installers are not code-signed, so both systems will warn you the first time you run one.
 [Installing](./install.html) describes how to get past that.
 
-Choosing to run software your operating system has warned you about is a decision you are making.
+Getting past that warning is your decision, and the risk of doing so is yours.
 Only download Greatbook from this site, and check that the download came from `github.com/doublespacedapp/greatbook`.
 
 ## Ending it
@@ -98,7 +97,7 @@ Uninstalling it, or clearing the site data for the web app, is the whole of it.
 Your gradebook file and your backups are yours and are left alone; delete them yourself if you want them gone.
 
 The developer may stop publishing Greatbook at some point.
-If that happens, what is installed on your device keeps working, and your gradebook files remain readable, because they are plain files rather than something only a running service can open.
+If that happens, what is already installed will not stop working because publishing stopped, and your gradebook files stay readable — they are plain files, and any program that reads that format can open them.
 
 ## Changes to these terms
 
